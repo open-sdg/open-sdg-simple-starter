@@ -16,5 +16,15 @@ src_dir: ''
 
 # Links to Git repositories with translation data.
 translations:
-  - https://github.com/open-sdg/translations-un-sdg.git@1.0.0-rc1
-  - https://github.com/open-sdg/translations-open-sdg.git@1.0.0-rc5
+  - https://github.com/open-sdg/translations-un-sdg.git@master
+  - https://github.com/open-sdg/translations-open-sdg.git@master
+
+# This builds one or more GeoJSON files to be used by Open SDG maps. For more
+# information on the parameters, see the sdg-build library.
+map_layers: []
+# To use this, remove the "[]" in the line above and uncomment/configure below:
+#  - geojson_file: regions.geojson
+#    name_property: myNameProperty
+#    id_property: myIdProperty
+#    output_subfolder: regions
+#    filename_prefix: indicator_
