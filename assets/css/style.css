@@ -758,8 +758,10 @@ body.contrast-high {
     border-color: black; }
   body.contrast-high p, body.contrast-high h2, body.contrast-high h3, body.contrast-high h4, body.contrast-high span, body.contrast-high td, body.contrast-high th, body.contrast-high a#text {
     color: white; }
-  body.contrast-high h1, body.contrast-high li, body.contrast-high a {
+  body.contrast-high li, body.contrast-high a {
     color: yellow; }
+  body.contrast-high h1 {
+    color: white; }
   body.contrast-high li.contrast-default a {
     color: black !important; }
 
@@ -794,7 +796,8 @@ body.long .navbar ul.navbar-nav li.contrast {
       display: none; } }
   body.long .navbar ul.navbar-nav li.contrast a {
     margin: auto;
-    text-decoration: none; }
+    text-decoration: none;
+    font-size: 14px; }
 body.long #accessibility-nav li.contrast {
   border-radius: 5px;
   height: auto;
@@ -819,6 +822,14 @@ body.long #accessibility-nav li.contrast {
 
 body.contrast-high .site-intro .description {
   color: white; }
+
+body.contrast-high #main-content .no-gutters img:not(#goal-18):hover {
+  box-shadow: 0px 0px 0px 5px yellow; }
+
+body.contrast-high footer a {
+  color: white; }
+  body.contrast-high footer a:hover, body.contrast-high footer a:focus {
+    color: yellow; }
 
 #skiplink {
   position: absolute;
@@ -1350,7 +1361,8 @@ footer {
   width: 100%;
   text-decoration: none; }
   #main-content.goal-indicators .indicator-cards a:hover {
-    background: transparent; }
+    background: transparent;
+    text-decoration: underline; }
 #main-content.goal-indicators .indicator-cards span {
   display: block;
   margin-bottom: 0.5rem;
@@ -1369,7 +1381,7 @@ footer {
     right: 0;
     display: inline;
     font-size: 12px; }
-    #main-content.goal-indicators .indicator-cards span.status.complete {
+    #main-content.goal-indicators .indicator-cards span.status.complete, #main-content.goal-indicators .indicator-cards span.status.inprogress {
       color: white; }
     #main-content.goal-indicators .indicator-cards span.status.notstarted {
       border: 1px solid black; }
@@ -1388,8 +1400,7 @@ footer {
   border-bottom: none; }
 #main-content.goal-indicators.goal-by-target .indicator-cards a {
   padding: 0;
-  margin-bottom: 2.5rem;
-  color: #044b88; }
+  margin-bottom: 2.5rem; }
   #main-content.goal-indicators.goal-by-target .indicator-cards a .tags li {
     color: black; }
 #main-content.goal-indicators.goal-by-target .indicator-cards.target {

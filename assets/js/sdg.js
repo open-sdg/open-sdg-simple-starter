@@ -577,13 +577,6 @@ var accessibilitySwitcher = function() {
     return null;
   }
 
-  window.onload = function(e) {
-    var cookie = readCookie("contrast");
-    var contrast = cookie ? cookie : contrastIdentifiers[0];
-    setActiveContrast(contrast);
-    imageFix(contrast);
-  }
-
   window.onunload = function(e) {
     var contrast = getActiveContrast();
     createCookie("contrast", contrast, 365);
@@ -592,6 +585,7 @@ var accessibilitySwitcher = function() {
   var cookie = readCookie("contrast");
   var contrast = cookie ? cookie : contrastIdentifiers[0];
   setActiveContrast(contrast);
+  imageFix(contrast);
 
   ////////////////////////////////////////////////////////////////////////////////////
 
@@ -1778,7 +1772,8 @@ var indicatorView = function (model, options) {
             },
             scaleLabel: {
               display: this._model.selectedUnit ? translations.t(this._model.selectedUnit) : this._model.measurementUnit,
-              labelString: this._model.selectedUnit ? translations.t(this._model.selectedUnit) : this._model.measurementUnit
+              labelString: this._model.selectedUnit ? translations.t(this._model.selectedUnit) : this._model.measurementUnit,
+              fontColor: tickColor,
             }
           }]
         },
@@ -1814,6 +1809,7 @@ var indicatorView = function (model, options) {
     window.addEventListener('contrastChange', function(e) {
       var gridColor = that.getGridColor(e.detail);
       var tickColor = that.getTickColor(e.detail);
+      view_obj._chartInstance.options.scales.yAxes[0].scaleLabel.fontColor = tickColor;
       view_obj._chartInstance.options.scales.yAxes[0].gridLines.color = gridColor;
       view_obj._chartInstance.options.scales.yAxes[0].ticks.fontColor = tickColor;
       view_obj._chartInstance.options.scales.xAxes[0].gridLines.color = gridColor;
