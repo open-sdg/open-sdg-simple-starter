@@ -114,8 +114,6 @@ var translations = {
         
         <link rel="canonical" href="/">
 
-        
-
         <!--[if IE 9]>
         <script src="/open-sdg-simple-starter/assets/js/lib/classList.js"></script>
         <![endif]-->
@@ -128,12 +126,10 @@ var translations = {
         -->
 
         
-
-        
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/open-sdg-simple-starter/assets/css/style.css?v=20210324003250">
+        <link rel="stylesheet" href="/open-sdg-simple-starter/assets/css/style.css?v=20210715171412">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -143,8 +139,12 @@ var translations = {
         <link rel="stylesheet" href="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.css"  crossorigin=""/>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin=""><!-- ShareThis BEGIN --><!-- ShareThis END -->
 
+        
+
     </head>
-<body class="language-en layout-goal-by-target-vertical">
+<body class="language-en
+layout-goal-by-target-vertical
+">
 <!-- <div class="container"> -->
 
 
@@ -170,12 +170,41 @@ var translations = {
     <img src="/open-sdg-simple-starter/assets/img/SDG_logo.png" alt="Sustainable Development Goals - 17 Goals to Transform our World" />
 </a>
       <div class="mobile-widgets">
-    <ul id='accessibility-nav' class='contrast-switcher'></ul></div>
+    <ul id='accessibility-nav' class='contrast-switcher'>
+        
+
+    <li class="nav-link contrast contrast-default contrast-type-default">
+        <a title="Disable high contrast"
+           aria-label="Disable high contrast"
+           data-contrast-switch-to="default"
+           href="javascript:void(0)"
+           data-on="click"
+data-event-category="Accessibility"
+data-event-action="Change contrast setting"
+data-event-label="default"
+
+        >A</a>
+    </li>
+    <li class="nav-link contrast contrast-high contrast-type-default">
+        <a title="Enable high contrast"
+           aria-label="Enable high contrast"
+           data-contrast-switch-to="high"
+           href="javascript:void(0)"
+           data-on="click"
+data-event-category="Accessibility"
+data-event-action="Change contrast setting"
+data-event-label="high"
+
+        >A</a>
+    </li>
+
+
+    </ul></div>
     </div>
 
     <div class="search-and-desktop-widgets">
       <div id="search" class="menu-target">
-  <form action="/open-sdg-simple-starter/search">
+  <form action="/open-sdg-simple-starter/search/">
     <label class="sr-only" for="indicator_search">Search</label>
     <input type="text" name="q" id="indicator_search" title="Search" /><!--
     --><button aria-label="Search" id="search-btn" type="submit"><i class="fa fa-search" aria-hidden="false"></i></button>
@@ -183,7 +212,35 @@ var translations = {
 </div>
 
       <div class="navbar navbar-default widgets-without-menu">
-        <ul class="nav navbar-nav contrast-switcher"></ul>
+        <ul class="nav navbar-nav contrast-switcher">
+
+    <li class="nav-link contrast contrast-default contrast-type-default">
+        <a title="Disable high contrast"
+           aria-label="Disable high contrast"
+           data-contrast-switch-to="default"
+           href="javascript:void(0)"
+           data-on="click"
+data-event-category="Accessibility"
+data-event-action="Change contrast setting"
+data-event-label="default"
+
+        >A</a>
+    </li>
+    <li class="nav-link contrast contrast-high contrast-type-default">
+        <a title="Enable high contrast"
+           aria-label="Enable high contrast"
+           data-contrast-switch-to="high"
+           href="javascript:void(0)"
+           data-on="click"
+data-event-category="Accessibility"
+data-event-action="Change contrast setting"
+data-event-label="high"
+
+        >A</a>
+    </li>
+
+
+        </ul>
       </div>
     </div>
 
@@ -206,6 +263,36 @@ var translations = {
 </li><li class="nav-link ">
     <a href="/open-sdg-simple-starter/news">Updates</a>
 </li>
+
+
+
+    <li class="nav-link contrast contrast-default contrast-type-default">
+        <a title="Disable high contrast"
+           aria-label="Disable high contrast"
+           data-contrast-switch-to="default"
+           href="javascript:void(0)"
+           data-on="click"
+data-event-category="Accessibility"
+data-event-action="Change contrast setting"
+data-event-label="default"
+
+        >A</a>
+    </li>
+    <li class="nav-link contrast contrast-high contrast-type-default">
+        <a title="Enable high contrast"
+           aria-label="Enable high contrast"
+           data-contrast-switch-to="high"
+           href="javascript:void(0)"
+           data-on="click"
+data-event-category="Accessibility"
+data-event-action="Change contrast setting"
+data-event-label="high"
+
+        >A</a>
+    </li>
+
+
+
 </ul>
 
     </li>
@@ -214,7 +301,7 @@ var translations = {
         aria-haspopup="true">
         <button data-target="search-mobile" aria-expanded="false">Search</button>
         <div id="search-mobile" class="menu-target">
-  <form action="/open-sdg-simple-starter/search">
+  <form action="/open-sdg-simple-starter/search/">
     <label class="sr-only" for="indicator_search-mobile">Search</label>
     <input type="text" name="q" id="indicator_search-mobile" title="Search" /><!--
     --><button aria-label="Search" id="search-mobile-btn" type="submit"><i class="fa fa-search" aria-hidden="false"></i></button>
@@ -236,6 +323,7 @@ var translations = {
 </li><li class="nav-link ">
     <a href="/open-sdg-simple-starter/news">Updates</a>
 </li>
+
 </ul>
 
     </div>
@@ -275,6 +363,7 @@ var translations = {
   </div>
 </div>
 
+
 <div id="main-content" class="container" role="main">
 
   
@@ -297,11 +386,6 @@ var translations = {
           
           
           
-          
-          
-          
-          
-          
 
           <div class="goal-indicator">
             <h4>
@@ -309,19 +393,18 @@ var translations = {
             </h4>
             <span class="indicator-name"><a href="/open-sdg-simple-starter/16-1-1">Number of victims of intentional homicide per 100,000 population, by sex and age</a></span>
             <span class="sr-only">Indicator status</span>
-            <span class="status notstarted">
-              Exploring data sources
-            </span>
+            
+
+
+<span class="status notstarted">
+    Exploring data sources
+</span>
+
             
 
           </div>
         
 
-          
-          
-          
-          
-          
           
           
           
@@ -332,19 +415,18 @@ var translations = {
             </h4>
             <span class="indicator-name"><a href="/open-sdg-simple-starter/16-1-2">Conflict-related deaths per 100,000 population, by sex, age and cause</a></span>
             <span class="sr-only">Indicator status</span>
-            <span class="status notstarted">
-              Exploring data sources
-            </span>
+            
+
+
+<span class="status notstarted">
+    Exploring data sources
+</span>
+
             
 
           </div>
         
 
-          
-          
-          
-          
-          
           
           
           
@@ -355,19 +437,18 @@ var translations = {
             </h4>
             <span class="indicator-name"><a href="/open-sdg-simple-starter/16-1-3">Proportion of population subjected to (a) physical violence, (b) psychological violence and (c) sexual violence in the previous 12 months</a></span>
             <span class="sr-only">Indicator status</span>
-            <span class="status notstarted">
-              Exploring data sources
-            </span>
+            
+
+
+<span class="status notstarted">
+    Exploring data sources
+</span>
+
             
 
           </div>
         
 
-          
-          
-          
-          
-          
           
           
           
@@ -378,9 +459,13 @@ var translations = {
             </h4>
             <span class="indicator-name"><a href="/open-sdg-simple-starter/16-1-4">Proportion of population that feel safe walking alone around the area they live</a></span>
             <span class="sr-only">Indicator status</span>
-            <span class="status notstarted">
-              Exploring data sources
-            </span>
+            
+
+
+<span class="status notstarted">
+    Exploring data sources
+</span>
+
             
 
           </div>
@@ -398,11 +483,6 @@ var translations = {
           
           
           
-          
-          
-          
-          
-          
 
           <div class="goal-indicator">
             <h4>
@@ -410,19 +490,18 @@ var translations = {
             </h4>
             <span class="indicator-name"><a href="/open-sdg-simple-starter/16-2-1">Proportion of children aged 1–17 years who experienced any physical punishment and/or psychological aggression by caregivers in the past month</a></span>
             <span class="sr-only">Indicator status</span>
-            <span class="status notstarted">
-              Exploring data sources
-            </span>
+            
+
+
+<span class="status notstarted">
+    Exploring data sources
+</span>
+
             
 
           </div>
         
 
-          
-          
-          
-          
-          
           
           
           
@@ -433,19 +512,18 @@ var translations = {
             </h4>
             <span class="indicator-name"><a href="/open-sdg-simple-starter/16-2-2">Number of victims of human trafficking per 100,000 population, by sex, age and form of exploitation</a></span>
             <span class="sr-only">Indicator status</span>
-            <span class="status notstarted">
-              Exploring data sources
-            </span>
+            
+
+
+<span class="status notstarted">
+    Exploring data sources
+</span>
+
             
 
           </div>
         
 
-          
-          
-          
-          
-          
           
           
           
@@ -456,9 +534,13 @@ var translations = {
             </h4>
             <span class="indicator-name"><a href="/open-sdg-simple-starter/16-2-3">Proportion of young women and men aged 18–29 years who experienced sexual violence by age 18</a></span>
             <span class="sr-only">Indicator status</span>
-            <span class="status notstarted">
-              Exploring data sources
-            </span>
+            
+
+
+<span class="status notstarted">
+    Exploring data sources
+</span>
+
             
 
           </div>
@@ -476,11 +558,6 @@ var translations = {
           
           
           
-          
-          
-          
-          
-          
 
           <div class="goal-indicator">
             <h4>
@@ -488,19 +565,18 @@ var translations = {
             </h4>
             <span class="indicator-name"><a href="/open-sdg-simple-starter/16-3-1">Proportion of victims of violence in the previous 12 months who reported their victimization to competent authorities or other officially recognized conflict resolution mechanisms</a></span>
             <span class="sr-only">Indicator status</span>
-            <span class="status notstarted">
-              Exploring data sources
-            </span>
+            
+
+
+<span class="status notstarted">
+    Exploring data sources
+</span>
+
             
 
           </div>
         
 
-          
-          
-          
-          
-          
           
           
           
@@ -511,9 +587,13 @@ var translations = {
             </h4>
             <span class="indicator-name"><a href="/open-sdg-simple-starter/16-3-2">Unsentenced detainees as a proportion of overall prison population</a></span>
             <span class="sr-only">Indicator status</span>
-            <span class="status notstarted">
-              Exploring data sources
-            </span>
+            
+
+
+<span class="status notstarted">
+    Exploring data sources
+</span>
+
             
 
           </div>
@@ -531,11 +611,6 @@ var translations = {
           
           
           
-          
-          
-          
-          
-          
 
           <div class="goal-indicator">
             <h4>
@@ -543,19 +618,18 @@ var translations = {
             </h4>
             <span class="indicator-name"><a href="/open-sdg-simple-starter/16-4-1">Total value of inward and outward illicit financial flows (in current United States dollars)</a></span>
             <span class="sr-only">Indicator status</span>
-            <span class="status notstarted">
-              Exploring data sources
-            </span>
+            
+
+
+<span class="status notstarted">
+    Exploring data sources
+</span>
+
             
 
           </div>
         
 
-          
-          
-          
-          
-          
           
           
           
@@ -566,9 +640,13 @@ var translations = {
             </h4>
             <span class="indicator-name"><a href="/open-sdg-simple-starter/16-4-2">Proportion of seized, found or surrendered arms whose illicit origin or context has been traced or established by a competent authority in line with international instruments</a></span>
             <span class="sr-only">Indicator status</span>
-            <span class="status notstarted">
-              Exploring data sources
-            </span>
+            
+
+
+<span class="status notstarted">
+    Exploring data sources
+</span>
+
             
 
           </div>
@@ -586,11 +664,6 @@ var translations = {
           
           
           
-          
-          
-          
-          
-          
 
           <div class="goal-indicator">
             <h4>
@@ -598,19 +671,18 @@ var translations = {
             </h4>
             <span class="indicator-name"><a href="/open-sdg-simple-starter/16-5-1">Proportion of persons who had at least one contact with a public official and who paid a bribe to a public official, or were asked for a bribe by those public officials, during the previous 12 months</a></span>
             <span class="sr-only">Indicator status</span>
-            <span class="status notstarted">
-              Exploring data sources
-            </span>
+            
+
+
+<span class="status notstarted">
+    Exploring data sources
+</span>
+
             
 
           </div>
         
 
-          
-          
-          
-          
-          
           
           
           
@@ -621,9 +693,13 @@ var translations = {
             </h4>
             <span class="indicator-name"><a href="/open-sdg-simple-starter/16-5-2">Proportion of businesses that had at least one contact with a public official and that paid a bribe to a public official, or were asked for a bribe by those public officials during the previous 12 months</a></span>
             <span class="sr-only">Indicator status</span>
-            <span class="status notstarted">
-              Exploring data sources
-            </span>
+            
+
+
+<span class="status notstarted">
+    Exploring data sources
+</span>
+
             
 
           </div>
@@ -641,11 +717,6 @@ var translations = {
           
           
           
-          
-          
-          
-          
-          
 
           <div class="goal-indicator">
             <h4>
@@ -653,19 +724,18 @@ var translations = {
             </h4>
             <span class="indicator-name"><a href="/open-sdg-simple-starter/16-6-1">Primary government expenditures as a proportion of original approved budget, by sector (or by budget codes or similar)</a></span>
             <span class="sr-only">Indicator status</span>
-            <span class="status notstarted">
-              Exploring data sources
-            </span>
+            
+
+
+<span class="status notstarted">
+    Exploring data sources
+</span>
+
             
 
           </div>
         
 
-          
-          
-          
-          
-          
           
           
           
@@ -676,9 +746,13 @@ var translations = {
             </h4>
             <span class="indicator-name"><a href="/open-sdg-simple-starter/16-6-2">Proportion of population satisfied with their last experience of public services</a></span>
             <span class="sr-only">Indicator status</span>
-            <span class="status notstarted">
-              Exploring data sources
-            </span>
+            
+
+
+<span class="status notstarted">
+    Exploring data sources
+</span>
+
             
 
           </div>
@@ -696,31 +770,25 @@ var translations = {
           
           
           
-          
-          
-          
-          
-          
 
           <div class="goal-indicator">
             <h4>
               <span class="indicator-number"><span class="sr-only">Indicator</span> 16.7.1</span>
             </h4>
-            <span class="indicator-name"><a href="/open-sdg-simple-starter/16-7-1">Proportions of positions (by sex, age, persons with disabilities and population groups) in public institutions (national and local legislatures, public service, and judiciary) compared to national distributions</a></span>
+            <span class="indicator-name"><a href="/open-sdg-simple-starter/16-7-1">Proportions of positions in national and local institutions, including (a) the legislatures; (b) the public service; and (c) the judiciary, compared to national distributions, by sex, age, persons with disabilities and population groups</a></span>
             <span class="sr-only">Indicator status</span>
-            <span class="status notstarted">
-              Exploring data sources
-            </span>
+            
+
+
+<span class="status notstarted">
+    Exploring data sources
+</span>
+
             
 
           </div>
         
 
-          
-          
-          
-          
-          
           
           
           
@@ -731,9 +799,13 @@ var translations = {
             </h4>
             <span class="indicator-name"><a href="/open-sdg-simple-starter/16-7-2">Proportion of population who believe decision-making is inclusive and responsive, by sex, age, disability and population group</a></span>
             <span class="sr-only">Indicator status</span>
-            <span class="status notstarted">
-              Exploring data sources
-            </span>
+            
+
+
+<span class="status notstarted">
+    Exploring data sources
+</span>
+
             
 
           </div>
@@ -751,11 +823,6 @@ var translations = {
           
           
           
-          
-          
-          
-          
-          
 
           <div class="goal-indicator">
             <h4>
@@ -763,9 +830,13 @@ var translations = {
             </h4>
             <span class="indicator-name"><a href="/open-sdg-simple-starter/16-8-1">Proportion of members and voting rights of developing countries in international organizations</a></span>
             <span class="sr-only">Indicator status</span>
-            <span class="status notstarted">
-              Exploring data sources
-            </span>
+            
+
+
+<span class="status notstarted">
+    Exploring data sources
+</span>
+
             
 
           </div>
@@ -783,11 +854,6 @@ var translations = {
           
           
           
-          
-          
-          
-          
-          
 
           <div class="goal-indicator">
             <h4>
@@ -795,9 +861,13 @@ var translations = {
             </h4>
             <span class="indicator-name"><a href="/open-sdg-simple-starter/16-9-1">Proportion of children under 5 years of age whose births have been registered with a civil authority, by age</a></span>
             <span class="sr-only">Indicator status</span>
-            <span class="status notstarted">
-              Exploring data sources
-            </span>
+            
+
+
+<span class="status notstarted">
+    Exploring data sources
+</span>
+
             
 
           </div>
@@ -815,11 +885,6 @@ var translations = {
           
           
           
-          
-          
-          
-          
-          
 
           <div class="goal-indicator">
             <h4>
@@ -827,19 +892,18 @@ var translations = {
             </h4>
             <span class="indicator-name"><a href="/open-sdg-simple-starter/16-10-1">Number of verified cases of killing, kidnapping, enforced disappearance, arbitrary detention and torture of journalists, associated media personnel, trade unionists and human rights advocates in the previous 12 months</a></span>
             <span class="sr-only">Indicator status</span>
-            <span class="status notstarted">
-              Exploring data sources
-            </span>
+            
+
+
+<span class="status notstarted">
+    Exploring data sources
+</span>
+
             
 
           </div>
         
 
-          
-          
-          
-          
-          
           
           
           
@@ -850,9 +914,13 @@ var translations = {
             </h4>
             <span class="indicator-name"><a href="/open-sdg-simple-starter/16-10-2">Number of countries that adopt and implement constitutional, statutory and/or policy guarantees for public access to information</a></span>
             <span class="sr-only">Indicator status</span>
-            <span class="status notstarted">
-              Exploring data sources
-            </span>
+            
+
+
+<span class="status notstarted">
+    Exploring data sources
+</span>
+
             
 
           </div>
@@ -870,11 +938,6 @@ var translations = {
           
           
           
-          
-          
-          
-          
-          
 
           <div class="goal-indicator">
             <h4>
@@ -882,9 +945,13 @@ var translations = {
             </h4>
             <span class="indicator-name"><a href="/open-sdg-simple-starter/16-a-1">Existence of independent national human rights institutions in compliance with the Paris Principles</a></span>
             <span class="sr-only">Indicator status</span>
-            <span class="status notstarted">
-              Exploring data sources
-            </span>
+            
+
+
+<span class="status notstarted">
+    Exploring data sources
+</span>
+
             
 
           </div>
@@ -902,11 +969,6 @@ var translations = {
           
           
           
-          
-          
-          
-          
-          
 
           <div class="goal-indicator">
             <h4>
@@ -914,9 +976,13 @@ var translations = {
             </h4>
             <span class="indicator-name"><a href="/open-sdg-simple-starter/16-b-1">Proportion of population reporting having personally felt discriminated against or harassed in the previous 12 months on the basis of a ground of discrimination prohibited under international human rights law</a></span>
             <span class="sr-only">Indicator status</span>
-            <span class="status notstarted">
-              Exploring data sources
-            </span>
+            
+
+
+<span class="status notstarted">
+    Exploring data sources
+</span>
+
             
 
           </div>
@@ -962,13 +1028,7 @@ var translations = {
   </div>
 </footer>
 
-<!-- Digital Analytics Program roll-up, see https://analytics.usa.gov for data -->
-<!-- <script id="_fed_an_ua_tag" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=GSA"></script> -->
-<!-- Google Analytics -->
-
-<!-- /.container </div> -->
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <script src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 <script src="//cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
@@ -987,12 +1047,12 @@ var translations = {
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/open-sdg-simple-starter/assets/js/sdg.js?v=20210324003250'></script>
+<script src='/open-sdg-simple-starter/assets/js/sdg.js?v=20210715171412'></script>
 
 
     
     
-    <script src="/open-sdg-simple-starter/assets/js/custom.js?v=20210324003250"></script><script>
+    <script src="/open-sdg-simple-starter/assets/js/custom.js?v=20210715171412"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();
@@ -1032,6 +1092,7 @@ $(function() {
               stackedDisaggregation: domData.stackeddisaggregation,
               graphAnnotations: domData.graphannotations,
               indicatorDownloads: domData.indicatordownloads,
+              dataSchema: domData.dataschema,
               compositeBreakdownLabel: domData.compositebreakdownlabel,
               precision: domData.precision,
             }),
