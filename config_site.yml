@@ -57,6 +57,9 @@ country:
   name: Australia
   adjective: Australian
 
+# Use favicon.io for favicons.
+favicons: favicon.io
+
 # Optionally set a title/body for the frontpage banner. The defaults below point to a standard
 # translation, but feel free to change it as needed.
 frontpage_introduction_banner:
