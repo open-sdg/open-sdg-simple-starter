@@ -11,25 +11,13 @@
       "schema": {
         "fields": [
           {
-            "name": "Group",
-            "type": "string",
-            "constraints": {
-              "enum": [
-                "",
-                "A",
-                "B"
-              ]
-            },
-            "title": "Group"
-          },
-          {
             "name": "Value",
-            "type": "integer",
+            "type": "number",
             "title": "Value"
           },
           {
             "name": "Year",
-            "type": "integer",
+            "type": "number",
             "title": "Year"
           }
         ]
@@ -38,5 +26,5 @@
   ],
   "profile": "data-package",
   "name": "12-c-1",
-  "title": "Amount of fossil-fuel subsidies per unit of GDP (production and consumption)"
+  "title": "Amount of fossil-fuel subsidies (production and consumption) per unit of GDP"
 }

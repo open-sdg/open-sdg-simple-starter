@@ -131,11 +131,12 @@ var translations = {
 
         
         
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/open-sdg-simple-starter/assets/css/style.css?v=20220331142700">
+        <link rel="stylesheet" href="/open-sdg-simple-starter/assets/css/style.css?v=20220331155849">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -158,9 +159,9 @@ layout-page
 
 <script>translations['header'] = {"alpha":"Alpha","default_contrast":"Default contrast","disable_high_contrast":"Disable high contrast","disclaimer":"This is a development website. We welcome your <a href=\"mailto:%email_address\">feedback</a>.","enable_high_contrast":"Enable high contrast","high_contrast":"High contrast","skip_link":"Skip to main content","tag_line":"17 Goals to Transform our World","toggle_menu":"Menu toggle. Click to expand or collapse the menu.","toggle_search":"Search toggle. Click to expand or collapse the search bar."};</script>
 
-<a class="sr-only sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Skip to main content</a>
+<a class="sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Skip to main content</a>
 <div id="disclaimer">
-  
+    
 <div class="container">
   <div class="disclaimer-alert">
     <strong class="phase-tag">Alpha</strong>
@@ -172,174 +173,76 @@ layout-page
 
 </div>
 
-<header role="banner" class="header-menu-left-aligned">
-  <div class="container">
-
-    <div class="logo-and-mobile-widgets">
-      <a class="navbar-brand" href="/open-sdg-simple-starter/" id="home">
+<header role="banner" class="">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light flex-wrap align-items-start">
+            <a class="navbar-brand" href="/open-sdg-simple-starter/" id="home">
     <img src="/open-sdg-simple-starter/assets/img/SDG_logo.png" alt="Sustainable Development Goals - 17 Goals to Transform our World" />
 </a>
-      <div class="mobile-widgets">
-    <ul id='accessibility-nav' class='contrast-switcher'>
-        
-
-    <li class="nav-link contrast contrast-default contrast-type-default">
-        <a title="Disable high contrast"
-           aria-label="Disable high contrast"
-           data-contrast-switch-to="default"
-           href="javascript:void(0)"
-           data-on="click"
-data-event-category="Accessibility"
-data-event-action="Change contrast setting"
-data-event-label="default"
-
-        >A</a>
-    </li>
-    <li class="nav-link contrast contrast-high contrast-type-default">
-        <a title="Enable high contrast"
-           aria-label="Enable high contrast"
-           data-contrast-switch-to="high"
-           href="javascript:void(0)"
-           data-on="click"
-data-event-category="Accessibility"
-data-event-action="Change contrast setting"
-data-event-label="high"
-
-        >A</a>
-    </li>
-
-
-    </ul></div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="d-flex flex-wrap w-100 justify-content-between">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav" id="menu"><li class="nav-item ">
+    <a class="nav-link" href="/open-sdg-simple-starter/goals">Goals</a>
+</li><li class="nav-item ">
+    <a class="nav-link" href="/open-sdg-simple-starter/reporting-status">Reporting Status</a>
+</li><li class="nav-item ">
+    <a class="nav-link" href="/open-sdg-simple-starter/about">About</a>
+</li><li class="nav-item active">
+    <a class="nav-link" href="/open-sdg-simple-starter/faq">FAQ</a>
+</li><li class="nav-item ">
+    <a class="nav-link" href="/open-sdg-simple-starter/news">Updates</a>
+</li></ul>
+    
+                </div>
+                <div class="header-search-bar">
+                    <form class="align-self-lg-end" id="search" action="/open-sdg-simple-starter/search/">
+    <div class="input-group">
+        <label class="visually-hidden" for="indicator_search">Search</label>
+        <input class="form-control" type="search" name="q" id="indicator_search" title="Search">
+        <span class="input-group-append">
+            <button class="btn btn-outline-secondary ms-n5" aria-label="Search" id="search-btn" type="submit">
+                <i class="fa fa-search"></i>
+            </button>
+        </span>
     </div>
+</form>
 
-    <div class="search-and-desktop-widgets">
-      <div id="search" class="menu-target">
-  <form action="/open-sdg-simple-starter/search/">
-    <label class="sr-only" for="indicator_search">Search</label>
-    <input type="text" name="q" id="indicator_search" title="Search" /><!--
-    --><button aria-label="Search" id="search-btn" type="submit"><i class="fa fa-search" aria-hidden="false"></i></button>
-  </form>
-</div>
-
-      <div class="navbar navbar-default widgets-without-menu">
-        <ul class="nav navbar-nav contrast-switcher">
-
-    <li class="nav-link contrast contrast-default contrast-type-default">
-        <a title="Disable high contrast"
-           aria-label="Disable high contrast"
-           data-contrast-switch-to="default"
-           href="javascript:void(0)"
-           data-on="click"
-data-event-category="Accessibility"
-data-event-action="Change contrast setting"
-data-event-label="default"
-
-        >A</a>
-    </li>
-    <li class="nav-link contrast contrast-high contrast-type-default">
-        <a title="Enable high contrast"
-           aria-label="Enable high contrast"
-           data-contrast-switch-to="high"
-           href="javascript:void(0)"
-           data-on="click"
-data-event-category="Accessibility"
-data-event-action="Change contrast setting"
-data-event-label="high"
-
-        >A</a>
-    </li>
-
-
-        </ul>
-      </div>
-    </div>
-
-    <div class="navbar navbar-default menu-without-widgets" id="main-nav">
-      <ul class="top-level">
-    <li id="menuToggle"
-        aria-label="Menu toggle. Click to expand or collapse the menu."
-        aria-haspopup="true">
-        <button data-target="menu-mobile" aria-expanded="false">Menu</button>
-        <ul class="nav navbar-nav menu-target contrast-switcher" id="menu-mobile"><li class="nav-link ">
-    <a href="/open-sdg-simple-starter/goals">Goals</a>
-</li><li class="nav-link ">
-    <a href="/open-sdg-simple-starter/reporting-status">Reporting Status</a>
-</li><li class="nav-link ">
-    <a href="/open-sdg-simple-starter/about">About</a>
-</li><li class="nav-link ">
-    <a href="/open-sdg-simple-starter/guidance">Guidance</a>
-</li><li class="nav-link active">
-    <a href="/open-sdg-simple-starter/faq">FAQ</a>
-</li><li class="nav-link ">
-    <a href="/open-sdg-simple-starter/news">Updates</a>
-</li>
+                </div>
+                <div class="header-toggles d-flex">
 
 
 
-    <li class="nav-link contrast contrast-default contrast-type-default">
-        <a title="Disable high contrast"
-           aria-label="Disable high contrast"
-           data-contrast-switch-to="default"
-           href="javascript:void(0)"
-           data-on="click"
-data-event-category="Accessibility"
-data-event-action="Change contrast setting"
-data-event-label="default"
-
-        >A</a>
-    </li>
-    <li class="nav-link contrast contrast-high contrast-type-default">
-        <a title="Enable high contrast"
-           aria-label="Enable high contrast"
-           data-contrast-switch-to="high"
-           href="javascript:void(0)"
-           data-on="click"
-data-event-category="Accessibility"
-data-event-action="Change contrast setting"
-data-event-label="high"
-
-        >A</a>
-    </li>
 
 
-
-</ul>
-
-    </li>
-    <li id="searchToggle"
-        aria-label="Search toggle. Click to expand or collapse the search bar."
-        aria-haspopup="true">
-        <button data-target="search-mobile" aria-expanded="false">Search</button>
-        <div id="search-mobile" class="menu-target">
-  <form action="/open-sdg-simple-starter/search/">
-    <label class="sr-only" for="indicator_search-mobile">Search</label>
-    <input type="text" name="q" id="indicator_search-mobile" title="Search" /><!--
-    --><button aria-label="Search" id="search-mobile-btn" type="submit"><i class="fa fa-search" aria-hidden="false"></i></button>
-  </form>
-</div>
-
-    </li>
-</ul>
-      <ul class="nav navbar-nav menu-target " id="menu"><li class="nav-link ">
-    <a href="/open-sdg-simple-starter/goals">Goals</a>
-</li><li class="nav-link ">
-    <a href="/open-sdg-simple-starter/reporting-status">Reporting Status</a>
-</li><li class="nav-link ">
-    <a href="/open-sdg-simple-starter/about">About</a>
-</li><li class="nav-link ">
-    <a href="/open-sdg-simple-starter/guidance">Guidance</a>
-</li><li class="nav-link active">
-    <a href="/open-sdg-simple-starter/faq">FAQ</a>
-</li><li class="nav-link ">
-    <a href="/open-sdg-simple-starter/news">Updates</a>
-</li>
-
-</ul>
-
-    </div>
-
+  <div class="language-toggle-container">
+  
+  <div class="btn-group language-toggle-dropdown  dropdown">
+    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <i class="fa fa-globe"></i>
+      English
+    </button>
+    <ul class="dropdown-menu"><li>
+            <a class="dropdown-item" href="/open-sdg-simple-starter/es/faq/">
+              Español
+            </a>
+          </li></ul>
   </div>
+</div>
 
+
+<a title="Enable high contrast" aria-label="Enable high contrast"
+    data-contrast-switch-to="" href="javascript:void(0)" data-on="click"
+data-event-category="Accessibility"
+data-event-action="Change contrast setting"
+data-event-label="high"
+>A</a>
+                </div>
+            </div>
+        </nav>
+    </div>
 </header>
 <div id="top" tabindex=-1></div>
 
@@ -352,36 +255,91 @@ data-event-label="high"
     <div>
         <h1>Frequently Asked Questions (FAQ)</h1>
         
-            <h2 id="how-do-i-suggest-new-or-different-data-sources">How do I suggest new or different data sources?</h2>
-<p>If you have feedback on the data sources we have used or have suggestions for new data sources then please email us at <a href="mailto:test@example.com">test@example.com</a>.</p>
-
-<h2 id="what-does-the-reporting-status-mean">What does the reporting status mean?</h2>
-<p>We have used three different types of reporting status for an indicator, which are also colour coded:</p>
-
+            <h2 id="table-of-contents">Table of contents</h2>
 <ul>
-  <li>Reported online (green) – as a minimum the headline national data for this indicator is available on this website but the data might not be fully disaggregated yet. We are continuing to source additional disaggregations.</li>
-  <li>Statistics in progress (amber) – we have found a suitable source of data for this indicator or relevant proxy at national level. We are currently quality assuring the data and preparing it for publication.</li>
-  <li>Exploring data sources (red) – we are still looking for a suitable data source for this indicator.</li>
+  <li>
+    <p><a href="#how-often-will-new-data-be-added-to-this-site">How often will new data be added to this site?</a></p>
+  </li>
+  <li>
+    <p><a href="#how-do-i-suggest-new-or-different-data-sources">How do I suggest new or different data sources?</a></p>
+  </li>
+  <li>
+    <p><a href="#what-are-you-doing-to-fill-data-gaps">What are you doing to fill data gaps?</a></p>
+  </li>
+  <li>
+    <p><a href="#what-does-the-reporting-status-mean">What does the reporting status mean?</a></p>
+  </li>
+  <li>
+    <p><a href="#can-other-countries-copy-this-website">Can other countries copy this website?</a></p>
+  </li>
+  <li>
+    <p><a href="#how-accessible-is-this-website">How accessible is this website?</a></p>
+  </li>
+  <li>
+    <p><a href="#what-browsers-can-i-use-to-view-this-website">What browsers can I use to view this website?</a></p>
+  </li>
+  <li>
+    <p><a href="#what-do-each-of-the-three-tiers-mean">What do each of the three tiers mean?</a></p>
+  </li>
 </ul>
 
-<p>Where there is additional information about the status of indicator data collection and reporting, this will be displayed at the top of the indicator page.</p>
-
 <h2 id="how-often-will-new-data-be-added-to-this-site">How often will new data be added to this site?</h2>
-<p>We will add data as soon as it has been sourced and checked. This includes new data as well as updates to data we have already published. We will continue to collect data from existing sources where possible, in cooperation with topic experts.</p>
+<p>We will add data as soon as it has been sourced and checked. This includes new data as well as updates to data we have already published. We will continue to collect data from existing sources where possible.</p>
+
+<h2 id="how-do-i-suggest-new-or-different-data-sources">How do I suggest new or different data sources?</h2>
+<p>If you have feedback on the data sources we have used or have suggestions for new data sources then please email us at <a href="mailto:test@example.com">test@example.com</a>.</p>
 
 <h2 id="what-are-you-doing-to-fill-data-gaps">What are you doing to fill data gaps?</h2>
 <p>For some indicators, although we may have data at the national level, our existing data sources don’t always allow us to disaggregate by all main groups.</p>
 
 <p>This means we need to look for new data sources, link existing ones, or model data.</p>
 
-<h2 id="how-accessible-is-this-website">How accessible is this website?</h2>
-<p>Our aim is to make this website as accessible and usable as possible for every user. We are working towards meeting AA level of the <a href="https://www.gov.uk/service-manual/helping-people-to-use-your-service/understanding-wcag-20">Web Content Accessibility Guidelines (WCAG 2.0)</a>.</p>
+<h2 id="what-does-the-reporting-status-mean">What does the reporting status mean?</h2>
+<p>We have used three different types of reporting status for an indicator, which are also colour coded:</p>
 
-<h2 id="what-browsers-can-i-use-to-view-this-website">What browsers can I use to view this website?</h2>
-<p>Our website works with most of the latest versions of the commonly used browsers. There are some issues with using the site on older versions of browsers eg IE8 and we are working to fix these.</p>
+<ul>
+  <li>
+    <p><strong>Reported (black):</strong> As a minimum the headline national data for this indicator is available on this website but the data might not be fully disaggregated yet. We are continuing to source additional disaggregations.</p>
+  </li>
+  <li>
+    <p><strong>Statistics in progress (grey):</strong> We have found a suitable source of data for this indicator or relevant proxy at national level. We are currently quality assuring the data and preparing it for publication.</p>
+  </li>
+  <li>
+    <p><strong>Exploring data sources (white):</strong> We are still looking for a suitable data source for this indicator.</p>
+  </li>
+  <li>
+    <p><strong>Not applicable (striped):</strong> This indicator is not applicable in the national context.</p>
+  </li>
+</ul>
 
 <h2 id="can-other-countries-copy-this-website">Can other countries copy this website?</h2>
-<p>Yes. This site is built and hosted using 100% free software and services, so other countries and localities can freely and easily reuse our code. Technical guidance on implementing this platform is available <a href="https://open-sdg.readthedocs.io">here</a>. Countries and localities exploring how to report their own SDGs data can also get support from the <a href="http://www.opendataenterprise.org/">Center for Open Data Enterprise (CODE)</a> through their <a href="https://www.sdgreporting.org/">SDG National Reporting Initiative</a>.</p>
+<p>Yes. See the <a href="https://open-sdg.readthedocs.io/en/latest/quick-start/">Open SDG Quick Start guide</a> for technical instructions on the quickest way to get a copy of the Open SDG platform up and running.</p>
+
+<h2 id="how-accessible-is-this-website">How accessible is this website?</h2>
+<p>Open SDG aims to be as accessible and usable as possible for every user and works towards meeting AA level of <a href="https://www.gov.uk/service-manual/helping-people-to-use-your-service/understanding-wcag-20">Web Content Accessibility Guidelines (WCAG 2.0)</a>.</p>
+
+<h2 id="what-browsers-can-i-use-to-view-this-website">What browsers can I use to view this website?</h2>
+<p>Our website works with most of the latest versions of the commonly used browsers.</p>
+
+<h2 id="what-do-each-of-the-three-tiers-mean">What do each of the three tiers mean?</h2>
+<p>Each of the SDG indicators are assigned to one (or more) of the following tiers:</p>
+<ul>
+  <li>
+    <p><strong>Tier 1:</strong> Indicator is conceptually clear, has an internationally established methodology and standards are available, and data are regularly produced by countries for at least 50 per cent of countries and of the population in every region where the indicator is relevant.</p>
+  </li>
+  <li>
+    <p><strong>Tier 2:</strong> Indicator is conceptually clear, has an internationally established methodology and standards are available, but data are not regularly produced by countries.</p>
+  </li>
+  <li>
+    <p><strong>Tier 3:</strong> No internationally established methodology or standards are yet available for the indicator, but methodology/standards are being (or will be) developed or tested (As of the 51st session of the UN Statistical Commission, the global indicator framework does not contain any Tier III indicators)</p>
+  </li>
+</ul>
+
+<p><strong>As of 28 December 2020:</strong> The updated tier classification contains <strong>130 Tier I indicators</strong>, <strong>97 Tier II indicators</strong> and <strong>4 indicators that have multiple tiers</strong> (different components of the indicator are classified into different tiers).</p>
+
+<p>For more information, <a href="https://unstats.un.org/sdgs/iaeg-sdgs/tier-classification/">see the IAEG-SDGs Tier Classification for Global SDG Indicators</a></p>
+
+<p><a href="#top">Back to top</a></p>
 
         
     </div>
@@ -389,52 +347,57 @@ data-event-label="high"
 
 
 <footer role="contentinfo">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12">
-        <div id="footerLinks">
-          <ul>
-            <li><a href="https://open-sdg.org">Built using Open SDG</a></li>
-            
-              <li>
-                
-                  <a href="mailto:my-email-address@example.com" target="_blank">Contact us</a>
-                
-                </li>
-              <li>
-                
-                  <a href="https://twitter.com/MyTwitterAccount" target="_blank">Twitter</a>
-                
-                </li>
-              <li>
-                
-                  <a href="https://facebook.com/MyFacebookAccount" target="_blank">Facebook</a>
-                
-                </li>
-              <li>
-                <a href="/open-sdg-simple-starter/about/cookies-and-privacy/">Cookies</a>
-                
-                </li>
-              
-            
-            </ul>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div id="footerLinks">
+                    <ul>
+                        <li>
+                            <a href="https://open-sdg.org">Built using Open SDG</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/open-sdg-simple-starter/contact-us">Contact us</a>
+                            
+                        </li>
+                        <li>
+                            
+                            <a href="https://twitter.com/MyTwitterAccount" target="_blank">Twitter</a>
+                            
+                        </li>
+                        <li>
+                            
+                            <a href="https://facebook.com/MyFacebookAccount" target="_blank">Facebook</a>
+                            
+                        </li>
+                        <li>
+                            <a href="/open-sdg-simple-starter/about/cookies-and-privacy/">Cookies</a>
+                            
+                        </li>
+                        
+                        
+                        
+                        <li>
+                            <a href="/open-sdg-simple-starter/config">Configuration</a>
+                        </li>
+                        </ul>
+                </div>
+            </div>
         </div>
-      </div>
+        
     </div>
-    
-  </div>
 </footer>
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-<script src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
-<script src="//cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
 
 <script src="//cdn.datatables.net/fixedcolumns/3.2.3/js/dataTables.fixedColumns.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js" integrity="sha512-90vH1Z83AJY9DmlWa8WkjkV79yfS2n2Oxhsi2dZbIv0nC4E6m5AbH8Nh156kkM7JePmqD6tcZsfad1ueoaovww==" crossorigin="anonymous"></script>
 
-<script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js" integrity="sha256-Y26AMvaIfrZ1EQU49pf6H4QzVTrOI8m9wQYKkftBt4s=" crossorigin="anonymous"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js"></script>
 
@@ -455,12 +418,12 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/open-sdg-simple-starter/assets/js/sdg.js?v=20220331142700'></script>
+<script src='/open-sdg-simple-starter/assets/js/sdg.js?v=20220331155849'></script>
 
 
     
     
-    <script src="/open-sdg-simple-starter/assets/js/custom.js?v=20220331142700"></script><script>
+    <script src="/open-sdg-simple-starter/assets/js/custom.js?v=20220331155849"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
