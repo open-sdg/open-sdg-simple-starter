@@ -25,7 +25,7 @@ site_dir: _build
 # -----------
 # This identifies a file containing the schema (possible fields) for metadata.
 # Currently this needs to be a prose.io config, and defaults to '_prose.yml'.
-schema_file: _prose.yml
+schema_file: metadata_schema.yml
 
 # Source directory
 # ----------------
@@ -47,9 +47,12 @@ inputs:
   - class: InputCsvData
     # This describes the data files, relative to the "src_dir" indicated above.
     path_pattern: data/*-*.csv
-  - class: InputYamlMdMeta
+  - class: InputYamlMeta
+    path_pattern: indicator-config/*-*.yml
+    git: false
+  - class: InputYamlMeta
     # This describes the meta files, relative to the "src_dir" indicated above.
-    path_pattern: meta/*-*.md
+    path_pattern: meta/*-*.yml
     # This specifies whether or not to use Git to calculate the "last updated"
     # dates for data files.
     git: true
@@ -59,6 +62,8 @@ inputs:
     # need to change this setting. It is intended for sites where the data needs
     # to be "built" before being processed by sdg-build.
     git_data_dir: data
+  - class: InputSdmxMeta
+    meta_suffix: __GLOBAL
 
 # Translations
 # ------------
