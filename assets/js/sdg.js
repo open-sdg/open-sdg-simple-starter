@@ -412,10 +412,21 @@ opensdg.autotrack = function(preset, category, action, label) {
 
           // Keep track of the minimums and maximums.
           _.each(geoJson.features, function(feature) {
-            if (feature.properties.values && feature.properties.values.length) {
-              availableYears = availableYears.concat(Object.keys(feature.properties.values[0]));
-              minimumValues.push(_.min(Object.values(feature.properties.values[0])));
-              maximumValues.push(_.max(Object.values(feature.properties.values[0])));
+            if (feature.properties.values && feature.properties.values.length > 0) {
+              var validEntries = _.reject(Object.entries(feature.properties.values[0]), function(entry) {
+                return isMapValueInvalid(entry[1]);
+              });
+              if (validEntries.length > 0) {
+                var validKeys = validEntries.map(function(entry) {
+                  return entry[0];
+                });
+                var validValues = validEntries.map(function(entry) {
+                  return entry[1];
+                })
+                availableYears = availableYears.concat(validKeys);
+                minimumValues.push(_.min(validValues));
+                maximumValues.push(_.max(validValues));
+              }
             }
           });
         }
@@ -606,6 +617,9 @@ opensdg.autotrack = function(preset, category, action, label) {
     });
   };
 })(jQuery);
+// This "crops" the charts so that empty years are not displayed
+// at the beginning or end of each dataset. This ensures that the
+// chart will fill all the available space.
 Chart.plugins.register({
   id: 'rescaler',
   beforeInit: function (chart, options) {
@@ -621,31 +635,34 @@ Chart.plugins.register({
   },
   afterUpdate: function (chart) {
 
+    // Ensure this only runs once.
     if (chart.isScaleUpdate) {
       chart.isScaleUpdate = false;
       return;
     }
 
-    var datasets = _.filter(chart.data.datasets, function (ds, index) {
-      var meta = chart.getDatasetMeta(index).$filler;
-      return meta && meta.visible;
-    });
-
-    var ranges = _.chain(datasets).map('allData').map(function (data) {
+    // For each dataset, create an object showing the
+    // index of the minimum value and the index of the
+    // maximum value (not counting empty/null values).
+    var ranges = _.chain(chart.data.datasets).map('allData').map(function (data) {
       return {
         min: _.findIndex(data, function(val) { return val !== null }),
         max: _.findLastIndex(data, function(val) { return val !== null })
       };
     }).value();
 
+    // Figure out the overal minimum and maximum
+    // considering all of the datasets.
     var dataRange = ranges.length ? {
       min: _.chain(ranges).map('min').min().value(),
       max: _.chain(ranges).map('max').max().value()
     } : undefined;
 
     if (dataRange) {
+      // "Crop" the labels according to the min/max.
       chart.data.labels = chart.data.allLabels.slice(dataRange.min, dataRange.max + 1);
 
+      // "Crop" the data of each dataset according to the min/max.
       chart.data.datasets.forEach(function (dataset) {
         dataset.data = dataset.allData.slice(dataRange.min, dataRange.max + 1);
       });
@@ -676,6 +693,7 @@ function getTextLinesOnCanvas(ctx, text, maxWidth) {
 
 // This plugin displays a message to the user whenever a chart has no data.
 Chart.plugins.register({
+  id: 'open-sdg-no-data-message',
   afterDraw: function(chart) {
     if (chart.data.datasets.length === 0) {
 
@@ -685,16 +703,19 @@ Chart.plugins.register({
       }
       // @deprecated end
 
+      
       var ctx = chart.chart.ctx;
       var width = chart.chart.width;
-      var height = chart.chart.height
+      var height = chart.chart.height;
+      
+
       chart.clear();
 
       ctx.save();
       ctx.textAlign = 'center';
       ctx.textBaseline = 'middle';
       ctx.font = "normal 40px 'Open Sans', Helvetica, Arial, sans-serif";
-      var lines = getTextLinesOnCanvas(ctx, translations.indicator.data_not_available, chart.chart.width);
+      var lines = getTextLinesOnCanvas(ctx, translations.indicator.data_not_available, width);
       var numLines = lines.length;
       var lineHeight = 50;
       var xLine = width / 2;
@@ -712,8 +733,10 @@ Chart.plugins.register({
     }
   }
 });
+
 // This plugin allows users to cycle through tooltips by keyboard.
 Chart.plugins.register({
+    id: 'open-sdg-accessible-charts',
     afterInit: function(chart) {
         var plugin = this;
         plugin.chart = chart;
@@ -739,7 +762,8 @@ Chart.plugins.register({
             .attr('role', 'status')
             .appendTo('#chart');
         if (window.innerWidth <= 768) {
-            $(this.chart.canvas).text(translations.indicator.chart + '. ' + translations.indicator.data_tabular_alternative);
+            var mobileInstructions = translations.indicator.chart + '. ' + translations.indicator.data_tabular_alternative;
+            $(this.chart.canvas).html('<span class="hide-during-image-download">' + mobileInstructions + '</span>');
         }
         else {
             var keyboardInstructions = translations.indicator.data_keyboard_navigation;
@@ -864,6 +888,7 @@ Chart.plugins.register({
         }
     }
 });
+
 function event(sender) {
   this._sender = sender;
   this._listeners = [];
@@ -1085,6 +1110,7 @@ var VALUE_COLUMN = 'Value';
 var HEADLINE_COLOR = '#777777';
 var SERIES_TOGGLE = true;
 var GRAPH_TITLE_FROM_SERIES = false;
+var CHARTJS_3 = false;
 
   /**
  * Model helper functions with general utility.
@@ -1153,6 +1179,10 @@ function nonFieldColumns() {
     'Unit multiplier',
     'Unit measure',
   ];
+  var timeSeriesAttributes = [{"field":"COMMENT_TS","label":"indicator.footnote"},{"field":"DATA_LAST_UPDATE","label":"metadata_fields.national_data_update_url"}];
+  timeSeriesAttributes.forEach(function(tsAttribute) {
+    columns.push(tsAttribute.field);
+  });
   if (SERIES_TOGGLE) {
     columns.push(SERIES_COLUMN);
   }
@@ -1953,6 +1983,25 @@ function getChartTitle(currentTitle, allTitles, selectedUnit, selectedSeries) {
 }
 
 /**
+ * @param {string} currentType
+ * @param {Array} allTypes Objects containing 'unit', 'series', and 'type'
+ * @param {String} selectedUnit
+ * @param {String} selectedSeries
+ * @param {Boolean} chartjs3
+ * @return {String} Updated type
+ */
+function getChartType(currentType, allTypes, selectedUnit, selectedSeries, chartjs3) {
+  if (!chartjs3) {
+    return currentType;
+  }
+  if (!currentType) {
+    currentType = 'line';
+  }
+  var match = getMatchByUnitSeries(allTypes, selectedUnit, selectedSeries);
+  return (match) ? match.type : currentType;
+}
+
+/**
  * @param {Array} graphLimits Objects containing 'unit' and 'title'
  * @param {String} selectedUnit
  * @param {String} selectedSeries
@@ -2277,7 +2326,8 @@ function getBaseDataset() {
     pointHoverRadius: 5,
     pointHoverBorderWidth: 1,
     tension: 0,
-    spanGaps: true
+    spanGaps: true,
+    maxBarThickness: 150,
   });
 }
 
@@ -2484,6 +2534,30 @@ function inputEdges(edges) {
   return edgesData;
 }
 
+/**
+ * @param {Array} rows
+ * @return {Array} Objects containing 'field' and 'value', to be placed in the footer.
+ */
+function getTimeSeriesAttributes(rows) {
+  if (rows.length === 0) {
+    return [];
+  }
+  var timeSeriesAttributes = [],
+      possibleAttributes = [{"field":"COMMENT_TS","label":"indicator.footnote"},{"field":"DATA_LAST_UPDATE","label":"metadata_fields.national_data_update_url"}],
+      firstRow = rows[0],
+      firstRowKeys = Object.keys(firstRow);
+  possibleAttributes.forEach(function(possibleAttribute) {
+    var field = possibleAttribute.field;
+    if (firstRowKeys.includes(field) && firstRow[field]) {
+      timeSeriesAttributes.push({
+        field: field,
+        value: firstRow[field],
+      });
+    }
+  });
+  return timeSeriesAttributes;
+}
+
 
   function deprecated(name) {
     return function() {
@@ -2499,6 +2573,7 @@ function inputEdges(edges) {
     VALUE_COLUMN: VALUE_COLUMN,
     SERIES_TOGGLE: SERIES_TOGGLE,
     GRAPH_TITLE_FROM_SERIES: GRAPH_TITLE_FROM_SERIES,
+    CHARTJS_3: CHARTJS_3,
     convertJsonFormatToRows: convertJsonFormatToRows,
     getUniqueValuesByProperty: getUniqueValuesByProperty,
     dataHasUnits: dataHasUnits,
@@ -2530,6 +2605,7 @@ function inputEdges(edges) {
     getUpdatedFieldItemStates: getUpdatedFieldItemStates,
     fieldItemStatesForView: fieldItemStatesForView,
     getChartTitle: getChartTitle,
+    getChartType: getChartType,
     getCombinationData: getCombinationData,
     getDatasets: getDatasets,
     tableDataFromDatasets: tableDataFromDatasets,
@@ -2540,6 +2616,7 @@ function inputEdges(edges) {
     getGraphAnnotations: getGraphAnnotations,
     getColumnsFromData: getColumnsFromData,
     inputEdges: inputEdges,
+    getTimeSeriesAttributes: getTimeSeriesAttributes,
     inputData: inputData,
     // Backwards compatibility.
     footerFields: deprecated('helpers.footerFields'),
@@ -2569,6 +2646,7 @@ function inputEdges(edges) {
   this.chartTitle = options.chartTitle,
   this.chartTitles = options.chartTitles;
   this.graphType = options.graphType;
+  this.graphTypes = options.graphTypes;
   this.measurementUnit = options.measurementUnit;
   this.xAxisLabel = options.xAxisLabel;
   this.startValues = options.startValues;
@@ -2675,6 +2753,10 @@ function inputEdges(edges) {
 
   this.updateChartTitle = function() {
     this.chartTitle = helpers.getChartTitle(this.chartTitle, this.chartTitles, this.selectedUnit, this.selectedSeries);
+  }
+
+  this.updateChartType = function() {
+    this.graphType = helpers.getChartType(this.graphType, this.graphTypes, this.selectedUnit, this.selectedSeries, helpers.CHARTJS_3);
   }
 
   this.updateSelectedUnit = function(selectedUnit) {
@@ -2827,6 +2909,14 @@ function inputEdges(edges) {
       filteredData = helpers.getDataByUnit(filteredData, this.selectedUnit);
     }
 
+    var timeSeriesAttributes = [];
+    if (filteredData.length > 0) {
+      timeSeriesAttributes = helpers.getTimeSeriesAttributes(filteredData);
+    }
+    else if (headline.length > 0) {
+      timeSeriesAttributes = helpers.getTimeSeriesAttributes(headline);
+    }
+
     filteredData = helpers.sortData(filteredData, this.selectedUnit);
     if (headline.length > 0) {
       headline = helpers.sortData(headline, this.selectedUnit);
@@ -2843,6 +2933,7 @@ function inputEdges(edges) {
     }
 
     this.updateChartTitle();
+    this.updateChartType();
 
     this.onFieldsStatusUpdated.notify({
       data: this.fieldItemStates,
@@ -2864,8 +2955,10 @@ function inputEdges(edges) {
       stackedDisaggregation: this.stackedDisaggregation,
       graphAnnotations: helpers.getGraphAnnotations(this.graphAnnotations, this.selectedUnit, this.selectedSeries, this.graphTargetLines, this.graphSeriesBreaks),
       chartTitle: this.chartTitle,
+      chartType: this.graphType,
       indicatorDownloads: this.indicatorDownloads,
       precision: helpers.getPrecision(this.precision, this.selectedUnit, this.selectedSeries),
+      timeSeriesAttributes: timeSeriesAttributes,
     });
   };
 };
@@ -2969,6 +3062,8 @@ var indicatorView = function (model, options) {
 
     view_obj.updateChartTitle(args.chartTitle);
     view_obj.updateSeriesAndUnitElements(args.selectedSeries, args.selectedUnit);
+    view_obj.updateUnitElements(args.selectedUnit);
+    view_obj.updateTimeSeriesAttributes(args.timeSeriesAttributes);
   });
 
   this._model.onFieldsComplete.attach(function(sender, args) {
@@ -3289,13 +3384,46 @@ var indicatorView = function (model, options) {
     }
   }
 
+  this.updateUnitElements = function(selectedUnit) {
+    var hasUnit = typeof selectedUnit !== 'undefined';
+    var fallback = this._model.measurementUnit;
+    if (hasUnit || fallback) {
+        var unitToDisplay = selectedUnit || fallback;
+        $('.data-controlled-footer-field.unit-from-data').show();
+        $('dd.data-controlled-footer-field.unit-from-data').text(translations.t(unitToDisplay));
+    }
+    else {
+        $('.data-controlled-footer-field.unit-from-data').hide();
+    }
+  }
+
+  this.updateTimeSeriesAttributes = function(tsAttributeValues) {
+    var timeSeriesAttributes = [{"field":"COMMENT_TS","label":"indicator.footnote"},{"field":"DATA_LAST_UPDATE","label":"metadata_fields.national_data_update_url"}];
+    timeSeriesAttributes.forEach(function(tsAttribute) {
+      var field = tsAttribute.field,
+          valueMatch = tsAttributeValues.find(function(tsAttributeValue) {
+            return tsAttributeValue.field === field;
+          }),
+          value = (valueMatch) ? valueMatch.value : '',
+          $labelElement = $('dt[data-ts-attribute="' + field + '"]'),
+          $valueElement = $('dd[data-ts-attribute="' + field + '"]');
+
+      if (!value) {
+        $labelElement.hide();
+        $valueElement.hide();
+      }
+      else {
+        $labelElement.show();
+        $valueElement.show().text(translations.t(value));
+      }
+    });
+  }
+
   this.updatePlot = function(chartInfo) {
     this.updateIndicatorDataViewStatus(view_obj._chartInstance.data.datasets, chartInfo.datasets);
     view_obj._chartInstance.data.datasets = chartInfo.datasets;
     view_obj._chartInstance.data.labels = chartInfo.labels;
     this.updateHeadlineColor(this.isHighContrast() ? 'high' : 'default', view_obj._chartInstance);
-    // TODO: Investigate assets/js/chartjs/rescaler.js and why "allLabels" is needed.
-    view_obj._chartInstance.data.allLabels = chartInfo.labels;
 
     if(chartInfo.selectedUnit) {
       view_obj._chartInstance.options.scales.yAxes[0].scaleLabel.labelString = translations.t(chartInfo.selectedUnit);
@@ -3463,9 +3591,8 @@ var indicatorView = function (model, options) {
     $("#btnSave").click(function() {
       var filename = chartInfo.indicatorId + '.png',
           element = document.getElementById('chart-canvas'),
-          footer = document.getElementById('selectionChartFooter'),
-          height = element.clientHeight + 25 + ((footer) ? footer.clientHeight : 0),
-          width = element.clientWidth + 25;
+          height = element.clientHeight + 70,
+          width = element.clientWidth + 50;
       var options = {
         // These options fix the height, width, and position.
         height: height,
@@ -3476,13 +3603,14 @@ var indicatorView = function (model, options) {
         y: 0,
         scrollX: 0,
         scrollY: 0,
+        backgroundColor: view_obj.isHighContrast() ? '#000000' : '#FFFFFF',
         // Allow a chance to alter the screenshot's HTML.
-        onclone: function(clone) {
+        onclone: function (clone) {
           // Add a body class so that the screenshot style can be custom.
           clone.body.classList.add('image-download-in-progress');
         },
         // Decide which elements to skip.
-        ignoreElements: function(el) {
+        ignoreElements: function (el) {
           // Keep all style, head, and link elements.
           var keepTags = ['STYLE', 'HEAD', 'LINK'];
           if (keepTags.indexOf(el.tagName) !== -1) {
@@ -3498,9 +3626,9 @@ var indicatorView = function (model, options) {
         }
       };
       // First convert the target to a canvas.
-      html2canvas(element, options).then(function(canvas) {
+      html2canvas(element, options).then(function (canvas) {
         // Then download that canvas as a PNG file.
-        canvas.toBlob(function(blob) {
+        canvas.toBlob(function (blob) {
           saveAs(blob, filename);
         });
       });
@@ -3930,6 +4058,71 @@ indicatorController.prototype = {
   initialise: function () {
     this._model.initialise();
   }
+};
+var indicatorInit = function () {
+    if ($('#indicatorData').length) {
+        var domData = $('#indicatorData').data();
+
+        if (domData.showdata) {
+
+            $('.async-loading').each(function (i, obj) {
+                $(obj).append($('<img />').attr('src', $(obj).data('img')).attr('alt', translations.indicator.loading));
+            });
+
+            var remoteUrl = '/comb/' + domData.id + '.json';
+            if (opensdg.remoteDataBaseUrl !== '/') {
+                remoteUrl = opensdg.remoteDataBaseUrl + remoteUrl;
+            }
+
+            $.ajax({
+                url: remoteUrl,
+                success: function (res) {
+
+                    $('.async-loading').remove();
+                    $('.async-loaded').show();
+
+                    var model = new indicatorModel({
+                        data: res.data,
+                        edgesData: res.edges,
+                        showMap: domData.showmap,
+                        country: domData.country,
+                        indicatorId: domData.indicatorid,
+                        shortIndicatorId: domData.id,
+                        chartTitle: domData.charttitle,
+                        chartTitles: domData.charttitles,
+                        measurementUnit: domData.measurementunit,
+                        xAxisLabel: domData.xaxislabel,
+                        showData: domData.showdata,
+                        graphType: domData.graphtype,
+                        graphTypes: domData.graphtypes,
+                        startValues: domData.startvalues,
+                        graphLimits: domData.graphlimits,
+                        stackedDisaggregation: domData.stackeddisaggregation,
+                        graphAnnotations: domData.graphannotations,
+                        graphTargetLines: domData.graphtargetlines,
+                        graphSeriesBreaks: domData.graphseriesbreaks,
+                        indicatorDownloads: domData.indicatordownloads,
+                        dataSchema: domData.dataschema,
+                        compositeBreakdownLabel: domData.compositebreakdownlabel,
+                        precision: domData.precision,
+                    });
+                    var view = new indicatorView(model, {
+                        rootElement: '#indicatorData',
+                        legendElement: '#plotLegend',
+                        decimalSeparator: '',
+                        maxChartHeight: 420,
+                        tableColumnDefs: [
+                            { maxCharCount: 25 }, // nowrap
+                            { maxCharCount: 35, width: 200 },
+                            { maxCharCount: Infinity, width: 250 }
+                        ]
+                    });
+                    var controller = new indicatorController(model, view);
+                    controller.initialise();
+                }
+            });
+        }
+    }
 };
 $(document).ready(function() {
     $('.nav-tabs').each(function() {
