@@ -41,10 +41,6 @@ var opensdg = {
   language: 'en',
 };
 
-// For backwards compatibility, some of these might need to be global.
-// @TODO: Remove these eventually.
-var remoteDataBaseUrl = opensdg.remoteDataBaseUrl;
-
 </script>
 
         <script>
@@ -118,25 +114,18 @@ var translations = {
         <script src="/open-sdg-simple-starter/assets/js/lib/classList.js"></script>
         <![endif]-->
 
-        
-
-
-
-
-<link rel="apple-touch-icon" sizes="180x180" href="/open-sdg-simple-starter/assets/img/favicons/apple-touch-icon.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/open-sdg-simple-starter/assets/img/favicons/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/open-sdg-simple-starter/assets/img/favicons/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/open-sdg-simple-starter/assets/img/favicons/favicon-16x16.png">
 <link rel="icon" type="image/x-icon" href="/open-sdg-simple-starter/assets/img/favicons/favicon.ico" />
 
 
         
-        
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
-        
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/open-sdg-simple-starter/assets/css/style.css?v=20220625002359">
+        <link rel="stylesheet" href="/open-sdg-simple-starter/assets/css/style.css?v=20220625004633">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -147,6 +136,10 @@ var translations = {
         <link rel="stylesheet" href="https://cdn.kiprotect.com/klaro/v0.7/klaro.min.css" crossorigin=""/>
         
 
+        <!--[if IE]>
+        <link rel="stylesheet" href="/open-sdg-simple-starter/assets/css/ie.css">
+        <![endif]-->
+
         
 
     </head>
@@ -155,11 +148,13 @@ layout-goal
 ">
 <!-- <div class="container"> -->
 
-
-
 <script>translations['header'] = {"alpha":"Alpha","default_contrast":"Default contrast","disable_high_contrast":"Disable high contrast","disclaimer":"This is a development website. We welcome your <a href=\"mailto:%email_contacts.suggestions\">feedback</a>.","enable_high_contrast":"Enable high contrast","high_contrast":"High contrast","internet_explorer_message":"We have detected that you are using Internet Explorer to visit this website. Internet Explorer is now being phased out by Microsoft. As a result, this website no longer supports any version of Internet Explorer. Some features on this site will not work. You should use a modern browser such as Edge, Chrome, Firefox, or Safari. If you have difficulty installing or accessing a different browser, please contact your IT support team.","internet_explorer_message_title":"This internet browser is no longer supported","skip_link":"Skip to main content","tag_line":"17 Goals to Transform our World","toggle_menu":"Menu toggle. Click to expand or collapse the menu.","toggle_search":"Search toggle. Click to expand or collapse the search bar."};</script>
 
 <a class="sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Skip to main content</a>
+<div class="container internet-explorer-message">
+    <h2 class="internet-explorer-message-title">This internet browser is no longer supported</h2>
+    <p class="internet-explorer-message-body">We have detected that you are using Internet Explorer to visit this website. Internet Explorer is now being phased out by Microsoft. As a result, this website no longer supports any version of Internet Explorer. Some features on this site will not work. You should use a modern browser such as Edge, Chrome, Firefox, or Safari. If you have difficulty installing or accessing a different browser, please contact your IT support team.</p>
+</div>
 <div id="disclaimer">
     
 <div class="container">
@@ -233,7 +228,15 @@ layout-goal
 </div>
 
 
-<a title="Enable high contrast" aria-label="Enable high contrast"
+
+                    <span class="no-js-language-toggle"><div class="language-toggle-container d-flex">
+    <i class="fa fa-globe language-toggle-globe-links"></i>
+    <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-es list-inline-item">
+            <a class="language-toggle-link" href="/open-sdg-simple-starter/es/5/">
+                Español
+            </a>
+        </li></ul>
+</div></span><a title="Enable high contrast" aria-label="Enable high contrast"
     data-contrast-switch-to="" href="javascript:void(0)" data-on="click"
 data-event-category="Accessibility"
 data-event-action="Change contrast setting"
@@ -248,56 +251,84 @@ data-event-label="high"
 
 
 
-
-
 <div class="container">
-  <ol class="breadcrumb">
-  
-  <li><a href="/open-sdg-simple-starter/">Home</a></li>
-  <li><a href="/open-sdg-simple-starter/goals">Goals</a></li>
-  
-  
-</ol>
-
+  <nav>
+    <ol aria-label="breadcrumb" class="breadcrumb" style="--bs-breadcrumb-divider: '&rsaquo;';">
+        
+        <li class="breadcrumb-item" >
+            <a href="/open-sdg-simple-starter/">Home</a>
+        </li>
+        <li class="breadcrumb-item" >
+            <a href="/open-sdg-simple-starter/goals">Goals</a>
+        </li>
+        
+        
+    </ol>
+</nav>
   
 </div>
 
 <div class="heading goal-banner goal-5">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-4 col-md-3 col-lg-2 goal-tiles">
-        <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/5.png" alt="Gender equality - Goal 5" id="goal-5" class="goal-icon-image goal-icon-image-" />
-      </div>
-      <div class="col-xs-8 col-md-9 col-lg-10">
-        <h1>
-          <span class="hidden-sm hidden-md hidden-lg">Goal 5: </span>Achieve gender equality and empower all women and girls
-        </h1>
-      </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
+                <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/5.png" alt="Gender equality - Goal 5" id="goal-5" class="goal-icon-image goal-icon-image-" />
+            </div>
+            <div class="col-8 col-md-9 col-lg-10 goal-details">
+                <h1>Achieve gender equality and empower all women and girls</h1>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
 
 
-<div id="main-content" class="container goal-indicators goal-5" role="main">
+<div id="main-content" class="container" role="main">
 
   
 
 
 
-  
-  
+  <div class="container g-0">
+    <h2 class="goal-page-heading">Targets and indicators</h2>
 
     
     
-    
+      
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Target</span> 5.1</span>
+            </h3>
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">End all forms of discrimination against all women and girls everywhere</span>
+          </div>
+      </div>
+        
 
-    <div class="indicator-cards row no-gutters">
-        <div class="col-md-6 col-lg-3  goal-indicator">
           
-          <a href="/open-sdg-simple-starter/5-1-1">
-            <span class="indicator-card-number">
-              5.1.1
+          
+          
+          
+
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
+              <h4>
+                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 5.1.1</span>
+              </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
+              <span class="indicator-name"><a href="/open-sdg-simple-starter/5-1-1">Whether or not legal frameworks are in place to promote, enforce and monitor equality and non‐discrimination on the basis of sex</a></span>
+              
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
 
 
 
@@ -306,31 +337,52 @@ data-event-label="high"
 </span>
 
 
-            </span>
-            Whether or not legal frameworks are in place to promote, enforce and monitor equality and non‐discrimination on the basis of sex
-          </a>
+        </li></ul>
+
+
+            </div>
+            
+            
+          </div>
+        
+        <hr class="goal-page-target-rule" />
+    
+      
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Target</span> 5.2</span>
+            </h3>
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">Eliminate all forms of violence against all women and girls in the public and private spheres, including trafficking and sexual and other types of exploitation</span>
+          </div>
+      </div>
+        
+
+          
+          
+          
           
 
-
-
-
-
+          <div class="row align-items-start goal-indicator">
           
-        </div>
-    
-    
-
-    
-    
-    
-
-    
-        <div class="col-md-6 col-lg-3  goal-indicator">
-          
-          <a href="/open-sdg-simple-starter/5-2-1">
-            <span class="indicator-card-number">
-              5.2.1
+            <div class="col-auto goal-page-indicator-number">
+              <h4>
+                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 5.2.1</span>
+              </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
+              <span class="indicator-name"><a href="/open-sdg-simple-starter/5-2-1">Proportion of ever-partnered women and girls aged 15 years and older subjected to physical, sexual or psychological violence by a current or former intimate partner in the previous 12 months, by form of violence and by age</a></span>
+              
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
 
 
 
@@ -339,31 +391,38 @@ data-event-label="high"
 </span>
 
 
-            </span>
-            Proportion of ever-partnered women and girls aged 15 years and older subjected to physical, sexual or psychological violence by a current or former intimate partner in the previous 12 months, by form of violence and by age
-          </a>
+        </li></ul>
+
+
+            </div>
+            
+            
+          </div>
+        
+
+          
+          
+          
           
 
-
-
-
-
+          <div class="row align-items-start goal-indicator">
           
-        </div>
-    
-    
-
-    
-    
-    
-
-    
-        <div class="col-md-6 col-lg-3  goal-indicator">
-          
-          <a href="/open-sdg-simple-starter/5-2-2">
-            <span class="indicator-card-number">
-              5.2.2
+            <div class="col-auto goal-page-indicator-number">
+              <h4>
+                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 5.2.2</span>
+              </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
+              <span class="indicator-name"><a href="/open-sdg-simple-starter/5-2-2">Proportion of women and girls aged 15 years and older subjected to sexual violence by persons other than an intimate partner in the previous 12 months, by age and place of occurrence</a></span>
+              
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
 
 
 
@@ -372,31 +431,52 @@ data-event-label="high"
 </span>
 
 
-            </span>
-            Proportion of women and girls aged 15 years and older subjected to sexual violence by persons other than an intimate partner in the previous 12 months, by age and place of occurrence
-          </a>
+        </li></ul>
+
+
+            </div>
+            
+            
+          </div>
+        
+        <hr class="goal-page-target-rule" />
+    
+      
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Target</span> 5.3</span>
+            </h3>
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">Eliminate all harmful practices, such as child, early and forced marriage and female genital mutilation</span>
+          </div>
+      </div>
+        
+
+          
+          
+          
           
 
-
-
-
-
+          <div class="row align-items-start goal-indicator">
           
-        </div>
-    
-    
-
-    
-    
-    
-
-    
-        <div class="col-md-6 col-lg-3  goal-indicator">
-          
-          <a href="/open-sdg-simple-starter/5-3-1">
-            <span class="indicator-card-number">
-              5.3.1
+            <div class="col-auto goal-page-indicator-number">
+              <h4>
+                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 5.3.1</span>
+              </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
+              <span class="indicator-name"><a href="/open-sdg-simple-starter/5-3-1">Proportion of women aged 20–24 years who were married or in a union before age 15 and before age 18</a></span>
+              
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
 
 
 
@@ -405,31 +485,38 @@ data-event-label="high"
 </span>
 
 
-            </span>
-            Proportion of women aged 20–24 years who were married or in a union before age 15 and before age 18
-          </a>
+        </li></ul>
+
+
+            </div>
+            
+            
+          </div>
+        
+
+          
+          
+          
           
 
-
-
-
-
+          <div class="row align-items-start goal-indicator">
           
-        </div>
-    </div>
-    
-
-    
-    
-    
-
-    <div class="indicator-cards row no-gutters">
-        <div class="col-md-6 col-lg-3  goal-indicator">
-          
-          <a href="/open-sdg-simple-starter/5-3-2">
-            <span class="indicator-card-number">
-              5.3.2
+            <div class="col-auto goal-page-indicator-number">
+              <h4>
+                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 5.3.2</span>
+              </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
+              <span class="indicator-name"><a href="/open-sdg-simple-starter/5-3-2">Proportion of girls and women aged 15–49 years who have undergone female genital mutilation/cutting, by age</a></span>
+              
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
 
 
 
@@ -438,31 +525,52 @@ data-event-label="high"
 </span>
 
 
-            </span>
-            Proportion of girls and women aged 15–49 years who have undergone female genital mutilation/cutting, by age
-          </a>
+        </li></ul>
+
+
+            </div>
+            
+            
+          </div>
+        
+        <hr class="goal-page-target-rule" />
+    
+      
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Target</span> 5.4</span>
+            </h3>
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">Recognize and value unpaid care and domestic work through the provision of public services, infrastructure and social protection policies and the promotion of shared responsibility within the household and the family as nationally appropriate</span>
+          </div>
+      </div>
+        
+
+          
+          
+          
           
 
-
-
-
-
+          <div class="row align-items-start goal-indicator">
           
-        </div>
-    
-    
-
-    
-    
-    
-
-    
-        <div class="col-md-6 col-lg-3  goal-indicator">
-          
-          <a href="/open-sdg-simple-starter/5-4-1">
-            <span class="indicator-card-number">
-              5.4.1
+            <div class="col-auto goal-page-indicator-number">
+              <h4>
+                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 5.4.1</span>
+              </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
+              <span class="indicator-name"><a href="/open-sdg-simple-starter/5-4-1">Proportion of time spent on unpaid domestic and care work, by sex, age and location</a></span>
+              
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
 
 
 
@@ -471,31 +579,52 @@ data-event-label="high"
 </span>
 
 
-            </span>
-            Proportion of time spent on unpaid domestic and care work, by sex, age and location
-          </a>
+        </li></ul>
+
+
+            </div>
+            
+            
+          </div>
+        
+        <hr class="goal-page-target-rule" />
+    
+      
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Target</span> 5.5</span>
+            </h3>
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">Ensure women’s full and effective participation and equal opportunities for leadership at all levels of decision-making in political, economic and public life</span>
+          </div>
+      </div>
+        
+
+          
+          
+          
           
 
-
-
-
-
+          <div class="row align-items-start goal-indicator">
           
-        </div>
-    
-    
-
-    
-    
-    
-
-    
-        <div class="col-md-6 col-lg-3  goal-indicator">
-          
-          <a href="/open-sdg-simple-starter/5-5-1">
-            <span class="indicator-card-number">
-              5.5.1
+            <div class="col-auto goal-page-indicator-number">
+              <h4>
+                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 5.5.1</span>
+              </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
+              <span class="indicator-name"><a href="/open-sdg-simple-starter/5-5-1">Proportion of seats held by women in (a) national parliaments and (b) local governments</a></span>
+              
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
 
 
 
@@ -504,31 +633,38 @@ data-event-label="high"
 </span>
 
 
-            </span>
-            Proportion of seats held by women in (a) national parliaments and (b) local governments
-          </a>
+        </li></ul>
+
+
+            </div>
+            
+            
+          </div>
+        
+
+          
+          
+          
           
 
-
-
-
-
+          <div class="row align-items-start goal-indicator">
           
-        </div>
-    
-    
-
-    
-    
-    
-
-    
-        <div class="col-md-6 col-lg-3  goal-indicator">
-          
-          <a href="/open-sdg-simple-starter/5-5-2">
-            <span class="indicator-card-number">
-              5.5.2
+            <div class="col-auto goal-page-indicator-number">
+              <h4>
+                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 5.5.2</span>
+              </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
+              <span class="indicator-name"><a href="/open-sdg-simple-starter/5-5-2">Proportion of women in managerial positions</a></span>
+              
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
 
 
 
@@ -537,31 +673,52 @@ data-event-label="high"
 </span>
 
 
-            </span>
-            Proportion of women in managerial positions
-          </a>
+        </li></ul>
+
+
+            </div>
+            
+            
+          </div>
+        
+        <hr class="goal-page-target-rule" />
+    
+      
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Target</span> 5.6</span>
+            </h3>
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">Ensure universal access to sexual and reproductive health and reproductive rights as agreed in accordance with the Programme of Action of the International Conference on Population and Development and the Beijing Platform for Action and the outcome documents of their review conferences</span>
+          </div>
+      </div>
+        
+
+          
+          
+          
           
 
-
-
-
-
+          <div class="row align-items-start goal-indicator">
           
-        </div>
-    </div>
-    
-
-    
-    
-    
-
-    <div class="indicator-cards row no-gutters">
-        <div class="col-md-6 col-lg-3  goal-indicator">
-          
-          <a href="/open-sdg-simple-starter/5-6-1">
-            <span class="indicator-card-number">
-              5.6.1
+            <div class="col-auto goal-page-indicator-number">
+              <h4>
+                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 5.6.1</span>
+              </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
+              <span class="indicator-name"><a href="/open-sdg-simple-starter/5-6-1">Proportion of women aged 15–49 years who make their own informed decisions regarding sexual relations, contraceptive use and reproductive health care</a></span>
+              
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
 
 
 
@@ -570,31 +727,38 @@ data-event-label="high"
 </span>
 
 
-            </span>
-            Proportion of women aged 15–49 years who make their own informed decisions regarding sexual relations, contraceptive use and reproductive health care
-          </a>
+        </li></ul>
+
+
+            </div>
+            
+            
+          </div>
+        
+
+          
+          
+          
           
 
-
-
-
-
+          <div class="row align-items-start goal-indicator">
           
-        </div>
-    
-    
-
-    
-    
-    
-
-    
-        <div class="col-md-6 col-lg-3  goal-indicator">
-          
-          <a href="/open-sdg-simple-starter/5-6-2">
-            <span class="indicator-card-number">
-              5.6.2
+            <div class="col-auto goal-page-indicator-number">
+              <h4>
+                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 5.6.2</span>
+              </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
+              <span class="indicator-name"><a href="/open-sdg-simple-starter/5-6-2">Number of countries with laws and regulations that guarantee full and equal access to women and men aged 15 years and older to sexual and reproductive health care, information and education</a></span>
+              
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
 
 
 
@@ -603,31 +767,52 @@ data-event-label="high"
 </span>
 
 
-            </span>
-            Number of countries with laws and regulations that guarantee full and equal access to women and men aged 15 years and older to sexual and reproductive health care, information and education
-          </a>
+        </li></ul>
+
+
+            </div>
+            
+            
+          </div>
+        
+        <hr class="goal-page-target-rule" />
+    
+      
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Target</span> 5.a</span>
+            </h3>
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">Undertake reforms to give women equal rights to economic resources, as well as access to ownership and control over land and other forms of property, financial services, inheritance and natural resources, in accordance with national laws</span>
+          </div>
+      </div>
+        
+
+          
+          
+          
           
 
-
-
-
-
+          <div class="row align-items-start goal-indicator">
           
-        </div>
-    
-    
-
-    
-    
-    
-
-    
-        <div class="col-md-6 col-lg-3  goal-indicator">
-          
-          <a href="/open-sdg-simple-starter/5-a-1">
-            <span class="indicator-card-number">
-              5.a.1
+            <div class="col-auto goal-page-indicator-number">
+              <h4>
+                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 5.a.1</span>
+              </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
+              <span class="indicator-name"><a href="/open-sdg-simple-starter/5-a-1">(a) Proportion of total agricultural population with ownership or secure rights over agricultural land, by sex; and (b) share of women among owners or rights-bearers of agricultural land, by type of tenure</a></span>
+              
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
 
 
 
@@ -636,31 +821,38 @@ data-event-label="high"
 </span>
 
 
-            </span>
-            (a) Proportion of total agricultural population with ownership or secure rights over agricultural land, by sex; and (b) share of women among owners or rights-bearers of agricultural land, by type of tenure
-          </a>
+        </li></ul>
+
+
+            </div>
+            
+            
+          </div>
+        
+
+          
+          
+          
           
 
-
-
-
-
+          <div class="row align-items-start goal-indicator">
           
-        </div>
-    
-    
-
-    
-    
-    
-
-    
-        <div class="col-md-6 col-lg-3  goal-indicator">
-          
-          <a href="/open-sdg-simple-starter/5-a-2">
-            <span class="indicator-card-number">
-              5.a.2
+            <div class="col-auto goal-page-indicator-number">
+              <h4>
+                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 5.a.2</span>
+              </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
+              <span class="indicator-name"><a href="/open-sdg-simple-starter/5-a-2">Proportion of countries where the legal framework (including customary law) guarantees women’s equal rights to land ownership and/or control</a></span>
+              
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
 
 
 
@@ -669,31 +861,52 @@ data-event-label="high"
 </span>
 
 
-            </span>
-            Proportion of countries where the legal framework (including customary law) guarantees women’s equal rights to land ownership and/or control
-          </a>
+        </li></ul>
+
+
+            </div>
+            
+            
+          </div>
+        
+        <hr class="goal-page-target-rule" />
+    
+      
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Target</span> 5.b</span>
+            </h3>
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">Enhance the use of enabling technology, in particular information and communications technology, to promote the empowerment of women</span>
+          </div>
+      </div>
+        
+
+          
+          
+          
           
 
-
-
-
-
+          <div class="row align-items-start goal-indicator">
           
-        </div>
-    </div>
-    
-
-    
-    
-    
-
-    <div class="indicator-cards row no-gutters">
-        <div class="col-md-6 col-lg-3  goal-indicator">
-          
-          <a href="/open-sdg-simple-starter/5-b-1">
-            <span class="indicator-card-number">
-              5.b.1
+            <div class="col-auto goal-page-indicator-number">
+              <h4>
+                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 5.b.1</span>
+              </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
+              <span class="indicator-name"><a href="/open-sdg-simple-starter/5-b-1">Proportion of individuals who own a mobile telephone, by sex</a></span>
+              
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
 
 
 
@@ -702,31 +915,52 @@ data-event-label="high"
 </span>
 
 
-            </span>
-            Proportion of individuals who own a mobile telephone, by sex
-          </a>
+        </li></ul>
+
+
+            </div>
+            
+            
+          </div>
+        
+        <hr class="goal-page-target-rule" />
+    
+      
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Target</span> 5.c</span>
+            </h3>
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">Adopt and strengthen sound policies and enforceable legislation for the promotion of gender equality and the empowerment of all women and girls at all levels</span>
+          </div>
+      </div>
+        
+
+          
+          
+          
           
 
-
-
-
-
+          <div class="row align-items-start goal-indicator">
           
-        </div>
-    
-    
-
-    
-    
-    
-
-    
-        <div class="col-md-6 col-lg-3  goal-indicator">
-          
-          <a href="/open-sdg-simple-starter/5-c-1">
-            <span class="indicator-card-number">
-              5.c.1
+            <div class="col-auto goal-page-indicator-number">
+              <h4>
+                <span class="indicator-number"><span class="visually-hidden">Indicator</span> 5.c.1</span>
+              </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
               
+              <span class="indicator-name"><a href="/open-sdg-simple-starter/5-c-1">Proportion of countries with systems to track and make public allocations for gender equality and women’s empowerment</a></span>
+              
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label="Tags"><li class="list-inline-item">
+        <span class="visually-hidden">Indicator status</span>
+        
 
 
 
@@ -735,23 +969,18 @@ data-event-label="high"
 </span>
 
 
-            </span>
-            Proportion of countries with systems to track and make public allocations for gender equality and women’s empowerment
-          </a>
-          
+        </li></ul>
 
 
-
-
-
-          
-        </div>
+            </div>
+            
+            
+          </div>
+        
+        <hr class="goal-page-target-rule" />
     
-    
-	 	
-		
-			</div>
-		
+  </div>
+  <a href="#top">Back to top</a>
 </div>
 
 
@@ -798,16 +1027,12 @@ data-event-label="high"
 </footer>
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
-
 <script src="//cdn.datatables.net/fixedcolumns/3.2.3/js/dataTables.fixedColumns.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js" integrity="sha512-90vH1Z83AJY9DmlWa8WkjkV79yfS2n2Oxhsi2dZbIv0nC4E6m5AbH8Nh156kkM7JePmqD6tcZsfad1ueoaovww==" crossorigin="anonymous"></script>
-
 <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js" integrity="sha256-Y26AMvaIfrZ1EQU49pf6H4QzVTrOI8m9wQYKkftBt4s=" crossorigin="anonymous"></script>
-
 <script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js"></script>
 
 
@@ -827,12 +1052,12 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/open-sdg-simple-starter/assets/js/sdg.js?v=20220625002359'></script>
+<script src='/open-sdg-simple-starter/assets/js/sdg.js?v=20220625004633'></script>
 
 
     
     
-    <script src="/open-sdg-simple-starter/assets/js/custom.js?v=20220625002359"></script><script>
+    <script src="/open-sdg-simple-starter/assets/js/custom.js?v=20220625004633"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
@@ -840,4 +1065,3 @@ data-event-label="high"
 
 </body>
 </html>
-
