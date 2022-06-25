@@ -141,7 +141,7 @@ var translations = {
         
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/open-sdg-simple-starter/assets/css/style.css?v=20220331165743">
+        <link rel="stylesheet" href="/open-sdg-simple-starter/assets/css/style.css?v=20220625002158">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -156,7 +156,7 @@ var translations = {
 
     </head>
 <body class="language-es
-layout-indicator-bootstrap5
+layout-indicator
 ">
 <!-- <div class="container"> -->
 
@@ -344,52 +344,42 @@ data-event-label="high"
 
 <div class="container">
   
-<nav>
-    <ol aria-label="breadcrumb" class="breadcrumb" style="--bs-breadcrumb-divider: '&rsaquo;';">
-        
-        <li class="breadcrumb-item">
-            <a href="/open-sdg-simple-starter/es/">Inicio</a>
-        </li>
-        <li class="breadcrumb-item">
-            <a href="/open-sdg-simple-starter/es/goals">Objetivos</a>
-        </li>
-        
-        <li class="breadcrumb-item">
-            <a href="/open-sdg-simple-starter/es/17" title="Fortalecer los medios de implementación y revitalizar la Alianza Mundial para el Desarrollo Sostenible">Objetivo 17</a>
-        </li>
-        
-    </ol>
-</nav>
+<ol class="breadcrumb">
+  
+  <li><a href="/open-sdg-simple-starter/es/">Inicio</a></li>
+  <li><a href="/open-sdg-simple-starter/es/goals">Objetivos</a></li>
+  
+  <li><a href="/open-sdg-simple-starter/es/17" title="Fortalecer los medios de implementación y revitalizar la Alianza Mundial para el Desarrollo Sostenible">Objetivo 17</a></li>
+  
+</ol>
 
 
   
 </div>
 <div class="heading goal-banner indicator goal-17">
-    <div class="container">
-        <div class="row">
+  <div class="container">
+    <div class="row">
+      
+      <div class="col-xs-4 col-md-3 col-lg-2 goal-icon goal-tiles">
+        <a href="/open-sdg-simple-starter/es/17" title="Ver la lista de indicadores de este objetivo">
+          <img src="https://open-sdg.org/sdg-translations/assets/img/goals/es/17.png" alt="Alianzas para Lograr los Objetivos - Objetivo 17" id="goal-17" class="goal-icon-image goal-icon-image-"/>
+        </a>
+      </div>
+      <div class="col-xs-8 col-md-9 col-lg-10 indicator-details">
+      
+        <div>
+          <h1>
             
-            <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
-                <a href="/open-sdg-simple-starter/es/17" title="Ver la lista de indicadores de este objetivo">
-                    <img src="https://open-sdg.org/sdg-translations/assets/img/goals/es/17.png"
-                        alt="Alianzas para Lograr los Objetivos - Objetivo 17"
-                        id="goal-17"
-                        class="goal-icon-image goal-icon-image-" />
-                </a>
-            </div>
-            <div class="col-8 col-md-9 col-lg-10 indicator-details">
+            Indicador 17.18.3
             
-                <div>
-                    <h1>
-                        
-                        Indicador 17.18.3
-                        
-                        <span class="lead-copy">Número de países que cuentan con un plan estadístico nacional plenamente financiado y en proceso de aplicación, desglosado por fuente de financiación</span>
-                    </h1>
-                </div>
-            </div>
+            <span class="lead-copy">Número de países que cuentan con un plan estadístico nacional plenamente financiado y en proceso de aplicación, desglosado por fuente de financiación</span>
+          </h1>
         </div>
+      </div>
     </div>
+  </div>
 </div>
+
 <div id="main-content" class="container goal-17" role="main">
   
 
@@ -432,93 +422,81 @@ data-event-label="high"
   
   <div id="indicator-main" class="indicator-main col-md-12">
   
-  <div class="mt-4">
-<ul class="nav nav-tabs" role="tablist">
-    
-    
-        
-        
-        
-        
-        <li role="presentation" class="nav-item">
-            <button
-                type="button"
-                class="nav-link active"
-                data-bs-toggle="tab"
-                id="tab-national"
-                data-bs-target="#national"
-                aria-controls="national"
-                role="tab"
-                data-on="click"
+  <ul class="nav nav-tabs spacer medium" role="tablist">
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <li role="presentation" class="nav-item active">
+    <a class="nav-link" data-toggle="tab" id="tab-national" href="#national" aria-controls="national" role="tab" data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
 data-event-label="Change to indicator.national_metadata tab"
+>Metadatos nacionales</a>
+  </li>
 
-            >Metadatos nacionales</button>
-        </li>
-    
-        
-        
-        
-        
-        <li role="presentation" class="nav-item">
-            <button
-                type="button"
-                class="nav-link "
-                data-bs-toggle="tab"
-                id="tab-global"
-                data-bs-target="#global"
-                aria-controls="global"
-                role="tab"
-                data-on="click"
+  
+  
+  
+  
+  
+  
+  
+  
+  <li role="presentation" class="nav-item ">
+    <a class="nav-link" data-toggle="tab" id="tab-global" href="#global" aria-controls="global" role="tab" data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
 data-event-label="Change to indicator.global_metadata tab"
+>Metadatos globales</a>
+  </li>
 
-            >Metadatos globales</button>
-        </li>
-    
-        
-        
-        
-        
-        <li role="presentation" class="nav-item">
-            <button
-                type="button"
-                class="nav-link "
-                data-bs-toggle="tab"
-                id="tab-sources"
-                data-bs-target="#sources"
-                aria-controls="sources"
-                role="tab"
-                data-on="click"
+  
+  
+  
+  
+  
+  
+  
+  
+  <li role="presentation" class="nav-item ">
+    <a class="nav-link" data-toggle="tab" id="tab-sources" href="#sources" aria-controls="sources" role="tab" data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
 data-event-label="Change to indicator.sources tab"
+>Fuentes</a>
+  </li>
 
-            >Fuentes</button>
-        </li>
-    
-    
-    
-        <li role="presentation" class="nav-item">
-            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#edit" aria-controls="edit" role="tab">Editar</a>
-        </li>
-    
+
+  
+  <li role="presentation" class="nav-item">
+    <a class="nav-link" data-toggle="tab" href="#edit" aria-controls="edit" role="tab">Editar</a>
+  </li>
+  
 </ul>
 
 <div class="tab-content">
+  
     
-        
-        
-        
-        
-        
-        <div role="tabpanel" class="tab-pane active" id="national">
-            <article>
-                <p>Esta tabla proporciona metadatos para el indicador real disponible a partir de las estadísticas de %country_name más cercanas al correspondiente indicador global de SDG. Tenga en cuenta que incluso cuando el indicador global de ODS esté totalmente disponible a partir de las estadísticas de %country_adjective, se debe consultar esta tabla para obtener información sobre la metodología nacional y otra información de metadatos específicos de %country_adjective.</p>
+    
+    
+    
+    
+    
+    
+    
+    
+    <div role="tabpanel" class="tab-pane active" id="national">
+      <article>
+        <p>Esta tabla proporciona metadatos para el indicador real disponible a partir de las estadísticas de %country_name más cercanas al correspondiente indicador global de SDG. Tenga en cuenta que incluso cuando el indicador global de ODS esté totalmente disponible a partir de las estadísticas de %country_adjective, se debe consultar esta tabla para obtener información sobre la metodología nacional y otra información de metadatos específicos de %country_adjective.</p>
 
-                <table class="table">
+        <table class="table">
   
   
   
@@ -729,18 +707,22 @@ data-event-label="Change to indicator.sources tab"
   
 </table>
 
-            </article>
-        </div>
-        
-        
-        
-        
-        
-        <div role="tabpanel" class="tab-pane " id="global">
-            <article>
-                <p>Esta tabla proporciona información sobre los metadatos para los indicadores de los ODS tal como los define la Comisión de Estadística de la ONU. La <a href="https://unstats.un.org/sdgs/metadata/">División de Estadística de las Naciones Unidas proporciona</a> los metadatos globales completos .</p>
+      </article>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div role="tabpanel" class="tab-pane " id="global">
+      <article>
+        <p>Esta tabla proporciona información sobre los metadatos para los indicadores de los ODS tal como los define la Comisión de Estadística de la ONU. La <a href="https://unstats.un.org/sdgs/metadata/">División de Estadística de las Naciones Unidas proporciona</a> los metadatos globales completos .</p>
 
-                <table class="table">
+        <table class="table">
   
       
         
@@ -942,29 +924,33 @@ data-event-label="Change to indicator.sources tab"
           
 </table>
 
-            </article>
-        </div>
-        
-        
-        
-        
-        
-        <div role="tabpanel" class="tab-pane " id="sources">
-            <article>
-                
-                <!-- Count the non-empty sources (up to 5) -->
-
-
-
-
-
-            </article>
-        </div>
-        
+      </article>
+    </div>
     
     
-        <div role="tabpanel" class="tab-pane" id="edit">
-            <div class="edit-container">
+    
+    
+    
+    
+    
+    
+    
+    <div role="tabpanel" class="tab-pane " id="sources">
+      <article>
+        
+        <!-- Count the non-empty sources (up to 5) -->
+
+
+
+
+
+      </article>
+    </div>
+    
+  
+  
+  <div role="tabpanel" class="tab-pane" id="edit">
+    <div class="edit-container">
   
   
 
@@ -985,11 +971,11 @@ data-event-label="Change to indicator.sources tab"
 
 </div>
 
-        </div>
-    
-</div>
+  </div>
   
 </div>
+
+
   </div>
 </div>
 
@@ -1072,12 +1058,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Buscar';</script>
 
-<script src='/open-sdg-simple-starter/assets/js/sdg.js?v=20220331165743'></script>
+<script src='/open-sdg-simple-starter/assets/js/sdg.js?v=20220625002158'></script>
 
 
     
     
-    <script src="/open-sdg-simple-starter/assets/js/custom.js?v=20220331165743"></script><script>
+    <script src="/open-sdg-simple-starter/assets/js/custom.js?v=20220625002158"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

@@ -141,7 +141,7 @@ var translations = {
         
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/open-sdg-simple-starter/assets/css/style.css?v=20220331165743">
+        <link rel="stylesheet" href="/open-sdg-simple-starter/assets/css/style.css?v=20220625002158">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -156,7 +156,7 @@ var translations = {
 
     </head>
 <body class="language-en
-layout-indicator-bootstrap5
+layout-indicator
 ">
 <!-- <div class="container"> -->
 
@@ -344,52 +344,42 @@ data-event-label="high"
 
 <div class="container">
   
-<nav>
-    <ol aria-label="breadcrumb" class="breadcrumb" style="--bs-breadcrumb-divider: '&rsaquo;';">
-        
-        <li class="breadcrumb-item">
-            <a href="/open-sdg-simple-starter/">Home</a>
-        </li>
-        <li class="breadcrumb-item">
-            <a href="/open-sdg-simple-starter/goals">Goals</a>
-        </li>
-        
-        <li class="breadcrumb-item">
-            <a href="/open-sdg-simple-starter/9" title="Build resilient infrastructure, promote inclusive and sustainable industrialization and foster innovation">Goal 9</a>
-        </li>
-        
-    </ol>
-</nav>
+<ol class="breadcrumb">
+  
+  <li><a href="/open-sdg-simple-starter/">Home</a></li>
+  <li><a href="/open-sdg-simple-starter/goals">Goals</a></li>
+  
+  <li><a href="/open-sdg-simple-starter/9" title="Build resilient infrastructure, promote inclusive and sustainable industrialization and foster innovation">Goal 9</a></li>
+  
+</ol>
 
 
   
 </div>
 <div class="heading goal-banner indicator goal-9">
-    <div class="container">
-        <div class="row">
+  <div class="container">
+    <div class="row">
+      
+      <div class="col-xs-4 col-md-3 col-lg-2 goal-icon goal-tiles">
+        <a href="/open-sdg-simple-starter/9" title="View this goal's indicator list">
+          <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/9.png" alt="Industry, innovation and infrastructure - Goal 9" id="goal-9" class="goal-icon-image goal-icon-image-"/>
+        </a>
+      </div>
+      <div class="col-xs-8 col-md-9 col-lg-10 indicator-details">
+      
+        <div>
+          <h1>
             
-            <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
-                <a href="/open-sdg-simple-starter/9" title="View this goal's indicator list">
-                    <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/9.png"
-                        alt="Industry, innovation and infrastructure - Goal 9"
-                        id="goal-9"
-                        class="goal-icon-image goal-icon-image-" />
-                </a>
-            </div>
-            <div class="col-8 col-md-9 col-lg-10 indicator-details">
+            Indicator 9.3.1
             
-                <div>
-                    <h1>
-                        
-                        Indicator 9.3.1
-                        
-                        <span class="lead-copy">Proportion of small-scale industries in total industry value added</span>
-                    </h1>
-                </div>
-            </div>
+            <span class="lead-copy">Proportion of small-scale industries in total industry value added</span>
+          </h1>
         </div>
+      </div>
     </div>
+  </div>
 </div>
+
 <div id="main-content" class="container goal-9" role="main">
   
 
@@ -432,93 +422,81 @@ data-event-label="high"
   
   <div id="indicator-main" class="indicator-main col-md-12">
   
-  <div class="mt-4">
-<ul class="nav nav-tabs" role="tablist">
-    
-    
-        
-        
-        
-        
-        <li role="presentation" class="nav-item">
-            <button
-                type="button"
-                class="nav-link active"
-                data-bs-toggle="tab"
-                id="tab-national"
-                data-bs-target="#national"
-                aria-controls="national"
-                role="tab"
-                data-on="click"
+  <ul class="nav nav-tabs spacer medium" role="tablist">
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <li role="presentation" class="nav-item active">
+    <a class="nav-link" data-toggle="tab" id="tab-national" href="#national" aria-controls="national" role="tab" data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
 data-event-label="Change to indicator.national_metadata tab"
+>National Metadata</a>
+  </li>
 
-            >National Metadata</button>
-        </li>
-    
-        
-        
-        
-        
-        <li role="presentation" class="nav-item">
-            <button
-                type="button"
-                class="nav-link "
-                data-bs-toggle="tab"
-                id="tab-global"
-                data-bs-target="#global"
-                aria-controls="global"
-                role="tab"
-                data-on="click"
+  
+  
+  
+  
+  
+  
+  
+  
+  <li role="presentation" class="nav-item ">
+    <a class="nav-link" data-toggle="tab" id="tab-global" href="#global" aria-controls="global" role="tab" data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
 data-event-label="Change to indicator.global_metadata tab"
+>Global Metadata</a>
+  </li>
 
-            >Global Metadata</button>
-        </li>
-    
-        
-        
-        
-        
-        <li role="presentation" class="nav-item">
-            <button
-                type="button"
-                class="nav-link "
-                data-bs-toggle="tab"
-                id="tab-sources"
-                data-bs-target="#sources"
-                aria-controls="sources"
-                role="tab"
-                data-on="click"
+  
+  
+  
+  
+  
+  
+  
+  
+  <li role="presentation" class="nav-item ">
+    <a class="nav-link" data-toggle="tab" id="tab-sources" href="#sources" aria-controls="sources" role="tab" data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
 data-event-label="Change to indicator.sources tab"
+>Sources</a>
+  </li>
 
-            >Sources</button>
-        </li>
-    
-    
-    
-        <li role="presentation" class="nav-item">
-            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#edit" aria-controls="edit" role="tab">Edit</a>
-        </li>
-    
+
+  
+  <li role="presentation" class="nav-item">
+    <a class="nav-link" data-toggle="tab" href="#edit" aria-controls="edit" role="tab">Edit</a>
+  </li>
+  
 </ul>
 
 <div class="tab-content">
+  
     
-        
-        
-        
-        
-        
-        <div role="tabpanel" class="tab-pane active" id="national">
-            <article>
-                <p>This table provides metadata for the actual indicator available from %country_name statistics closest to the corresponding global SDG indicator. Please note that even when the global SDG indicator is fully available from %country_adjective statistics, this table should be consulted for information on national methodology and other %country_adjective-specific metadata information.</p>
+    
+    
+    
+    
+    
+    
+    
+    
+    <div role="tabpanel" class="tab-pane active" id="national">
+      <article>
+        <p>This table provides metadata for the actual indicator available from %country_name statistics closest to the corresponding global SDG indicator. Please note that even when the global SDG indicator is fully available from %country_adjective statistics, this table should be consulted for information on national methodology and other %country_adjective-specific metadata information.</p>
 
-                <table class="table">
+        <table class="table">
   
   
   
@@ -729,18 +707,22 @@ data-event-label="Change to indicator.sources tab"
   
 </table>
 
-            </article>
-        </div>
-        
-        
-        
-        
-        
-        <div role="tabpanel" class="tab-pane " id="global">
-            <article>
-                <p>This table provides information on metadata for SDG indicators as defined by the UN Statistical Commission. <a href="https://unstats.un.org/sdgs/metadata/">Complete global metadata</a> is provided by the UN Statistics Division.</p>
+      </article>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div role="tabpanel" class="tab-pane " id="global">
+      <article>
+        <p>This table provides information on metadata for SDG indicators as defined by the UN Statistical Commission. <a href="https://unstats.un.org/sdgs/metadata/">Complete global metadata</a> is provided by the UN Statistics Division.</p>
 
-                <table class="table">
+        <table class="table">
   
       
         
@@ -782,7 +764,7 @@ data-event-label="Change to indicator.sources tab"
         <th scope="row">Metadata update </th>
         <td>
           
-            <p>2021-02-01</p>
+            <p>2022-03-31</p>
 
           
         </td>
@@ -814,7 +796,7 @@ data-event-label="Change to indicator.sources tab"
         <th scope="row">Related indicators </th>
         <td>
           
-            <p>9.3.2</p>
+            <p>9.3.2: Proportion of small-scale industries with a loan or line of credit</p>
 
           
         </td>
@@ -942,29 +924,33 @@ data-event-label="Change to indicator.sources tab"
           
 </table>
 
-            </article>
-        </div>
-        
-        
-        
-        
-        
-        <div role="tabpanel" class="tab-pane " id="sources">
-            <article>
-                
-                <!-- Count the non-empty sources (up to 5) -->
-
-
-
-
-
-            </article>
-        </div>
-        
+      </article>
+    </div>
     
     
-        <div role="tabpanel" class="tab-pane" id="edit">
-            <div class="edit-container">
+    
+    
+    
+    
+    
+    
+    
+    <div role="tabpanel" class="tab-pane " id="sources">
+      <article>
+        
+        <!-- Count the non-empty sources (up to 5) -->
+
+
+
+
+
+      </article>
+    </div>
+    
+  
+  
+  <div role="tabpanel" class="tab-pane" id="edit">
+    <div class="edit-container">
   
   
 
@@ -985,11 +971,11 @@ data-event-label="Change to indicator.sources tab"
 
 </div>
 
-        </div>
-    
-</div>
+  </div>
   
 </div>
+
+
   </div>
 </div>
 
@@ -1072,12 +1058,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/open-sdg-simple-starter/assets/js/sdg.js?v=20220331165743'></script>
+<script src='/open-sdg-simple-starter/assets/js/sdg.js?v=20220625002158'></script>
 
 
     
     
-    <script src="/open-sdg-simple-starter/assets/js/custom.js?v=20220331165743"></script><script>
+    <script src="/open-sdg-simple-starter/assets/js/custom.js?v=20220625002158"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

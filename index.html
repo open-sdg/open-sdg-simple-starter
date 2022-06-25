@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en" class="no-js">
     <head>
@@ -137,7 +136,7 @@ var translations = {
         
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/open-sdg-simple-starter/assets/css/style.css?v=20220331165743">
+        <link rel="stylesheet" href="/open-sdg-simple-starter/assets/css/style.css?v=20220625002158">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -152,7 +151,7 @@ var translations = {
 
     </head>
 <body class="language-en
-layout-frontpage-alt
+layout-frontpage
 ">
 <!-- <div class="container"> -->
 
@@ -253,163 +252,166 @@ data-event-label="high"
 <div id="main-content" class="container" role="main">
 
     
-    <div class="site-intro">
+    <div class="site-intro spacer medium">
         <h1>17 goals to transform our world</h1>
-        <div class="lead-copy"><p>The <a href="https://www.un.org/sustainabledevelopment/sustainable-development-goals/">Sustainable Development Goals (SDGs)</a> are a universal call to action to end poverty, protect the planet and improve the lives and prospects of everyone, everywhere. The 17 Goals were adopted by all UN Member States in 2015, as part of the <a href="http://www.un.org/ga/search/view_doc.asp?symbol=A/RES/70/1&amp;Lang=E">2030 Agenda for Sustainable Development</a>.</p>
-</div>
+        <p class="lead-copy">The <a href="https://www.un.org/sustainabledevelopment/sustainable-development-goals/">Sustainable Development Goals (SDGs)</a> are a universal call to action to end poverty, protect the planet and improve the lives and prospects of everyone, everywhere. The 17 Goals were adopted by all UN Member States in 2015, as part of the <a href="http://www.un.org/ga/search/view_doc.asp?symbol=A/RES/70/1&Lang=E">2030 Agenda for Sustainable Development</a>.</p>
     </div>
     
 
     
-    <div class="frontpage-goals-grid">
+    
+    <h2 class="spacer medium">Australia data for Sustainable Development Goal indicators</h2>
 
-        
-        <h2 class="frontpage-goals-grid-title">Our data for Sustainable Development Goal indicators</h2>
-        
+    
+    <p class="spacer medium">Click on each goal, or <span id="jump-to-search"><a> search, </a></span> for Australia statistics for Sustainable Development Goal global indicators.</p>
 
+    <div class="goal-tiles">
+    
+        <div class="row no-gutters">
+            <div class="col-xs-4 col-md-2">
+                <a href="/open-sdg-simple-starter/1">
+                  <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/1.png" id="goal-1" alt="No poverty - Goal 1" class="goal-icon-image goal-icon-image-" />
+              </a>
+            </div>
         
-        <div class="frontpage-goals-grid-description"><p>Click on each goal for our Sustainable Development Goal global indicator data.</p>
-</div>
+    
         
-
+            <div class="col-xs-4 col-md-2">
+                <a href="/open-sdg-simple-starter/2">
+                  <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/2.png" id="goal-2" alt="Zero hunger - Goal 2" class="goal-icon-image goal-icon-image-" />
+              </a>
+            </div>
         
-        <div class="goal-tiles">
-    <div class="row g-2">
+    
         
-        <div class="col-4 col-md-2 col-lg-1 goal-tile">
-            <a href="/open-sdg-simple-starter/1">
-                <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/1.png" id="goal-1" alt="No poverty - Goal 1" class="goal-icon-image goal-icon-image-"/>
-            </a>
+            <div class="col-xs-4 col-md-2">
+                <a href="/open-sdg-simple-starter/3">
+                  <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/3.png" id="goal-3" alt="Good health and well-being - Goal 3" class="goal-icon-image goal-icon-image-" />
+              </a>
+            </div>
+        
+    
+        
+            <div class="col-xs-4 col-md-2">
+                <a href="/open-sdg-simple-starter/4">
+                  <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/4.png" id="goal-4" alt="Quality education - Goal 4" class="goal-icon-image goal-icon-image-" />
+              </a>
+            </div>
+        
+    
+        
+            <div class="col-xs-4 col-md-2">
+                <a href="/open-sdg-simple-starter/5">
+                  <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/5.png" id="goal-5" alt="Gender equality - Goal 5" class="goal-icon-image goal-icon-image-" />
+              </a>
+            </div>
+        
+    
+        
+            <div class="col-xs-4 col-md-2">
+                <a href="/open-sdg-simple-starter/6">
+                  <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/6.png" id="goal-6" alt="Clean water and sanitation - Goal 6" class="goal-icon-image goal-icon-image-" />
+              </a>
+            </div>
         </div>
+    
+        <div class="row no-gutters">
+            <div class="col-xs-4 col-md-2">
+                <a href="/open-sdg-simple-starter/7">
+                  <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/7.png" id="goal-7" alt="Affordable and clean energy - Goal 7" class="goal-icon-image goal-icon-image-" />
+              </a>
+            </div>
         
-        <div class="col-4 col-md-2 col-lg-1 goal-tile">
-            <a href="/open-sdg-simple-starter/2">
-                <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/2.png" id="goal-2" alt="Zero hunger - Goal 2" class="goal-icon-image goal-icon-image-"/>
-            </a>
+    
+        
+            <div class="col-xs-4 col-md-2">
+                <a href="/open-sdg-simple-starter/8">
+                  <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/8.png" id="goal-8" alt="Decent jobs and economic growth - Goal 8" class="goal-icon-image goal-icon-image-" />
+              </a>
+            </div>
+        
+    
+        
+            <div class="col-xs-4 col-md-2">
+                <a href="/open-sdg-simple-starter/9">
+                  <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/9.png" id="goal-9" alt="Industry, innovation and infrastructure - Goal 9" class="goal-icon-image goal-icon-image-" />
+              </a>
+            </div>
+        
+    
+        
+            <div class="col-xs-4 col-md-2">
+                <a href="/open-sdg-simple-starter/10">
+                  <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/10.png" id="goal-10" alt="Reduced inequalities - Goal 10" class="goal-icon-image goal-icon-image-" />
+              </a>
+            </div>
+        
+    
+        
+            <div class="col-xs-4 col-md-2">
+                <a href="/open-sdg-simple-starter/11">
+                  <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/11.png" id="goal-11" alt="Sustainable cities &amp; communities - Goal 11" class="goal-icon-image goal-icon-image-" />
+              </a>
+            </div>
+        
+    
+        
+            <div class="col-xs-4 col-md-2">
+                <a href="/open-sdg-simple-starter/12">
+                  <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/12.png" id="goal-12" alt="Responsible consumption and production - Goal 12" class="goal-icon-image goal-icon-image-" />
+              </a>
+            </div>
         </div>
+    
+        <div class="row no-gutters">
+            <div class="col-xs-4 col-md-2">
+                <a href="/open-sdg-simple-starter/13">
+                  <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/13.png" id="goal-13" alt="Climate action - Goal 13" class="goal-icon-image goal-icon-image-" />
+              </a>
+            </div>
         
-        <div class="col-4 col-md-2 col-lg-1 goal-tile">
-            <a href="/open-sdg-simple-starter/3">
-                <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/3.png" id="goal-3" alt="Good health and well-being - Goal 3" class="goal-icon-image goal-icon-image-"/>
-            </a>
+    
+        
+            <div class="col-xs-4 col-md-2">
+                <a href="/open-sdg-simple-starter/14">
+                  <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/14.png" id="goal-14" alt="Life below water - Goal 14" class="goal-icon-image goal-icon-image-" />
+              </a>
+            </div>
+        
+    
+        
+            <div class="col-xs-4 col-md-2">
+                <a href="/open-sdg-simple-starter/15">
+                  <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/15.png" id="goal-15" alt="Life on land - Goal 15" class="goal-icon-image goal-icon-image-" />
+              </a>
+            </div>
+        
+    
+        
+            <div class="col-xs-4 col-md-2">
+                <a href="/open-sdg-simple-starter/16">
+                  <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/16.png" id="goal-16" alt="Peace and justice - strong institutions - Goal 16" class="goal-icon-image goal-icon-image-" />
+              </a>
+            </div>
+        
+    
+        
+            <div class="col-xs-4 col-md-2">
+                <a href="/open-sdg-simple-starter/17">
+                  <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/17.png" id="goal-17" alt="Partnerships for the goals - Goal 17" class="goal-icon-image goal-icon-image-" />
+              </a>
+            </div>
+        
+    
+    
+    
+        <div class="col-xs-4 col-md-2">
+            <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/18.png" id="goal-18" alt="The Global Goals for Sustainable Development" class="goal-icon-image goal-icon-image-" />
         </div>
-        
-        <div class="col-4 col-md-2 col-lg-1 goal-tile">
-            <a href="/open-sdg-simple-starter/4">
-                <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/4.png" id="goal-4" alt="Quality education - Goal 4" class="goal-icon-image goal-icon-image-"/>
-            </a>
-        </div>
-        
-        <div class="col-4 col-md-2 col-lg-1 goal-tile">
-            <a href="/open-sdg-simple-starter/5">
-                <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/5.png" id="goal-5" alt="Gender equality - Goal 5" class="goal-icon-image goal-icon-image-"/>
-            </a>
-        </div>
-        
-        <div class="col-4 col-md-2 col-lg-1 goal-tile">
-            <a href="/open-sdg-simple-starter/6">
-                <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/6.png" id="goal-6" alt="Clean water and sanitation - Goal 6" class="goal-icon-image goal-icon-image-"/>
-            </a>
-        </div>
-        
-        <div class="col-4 col-md-2 col-lg-1 goal-tile">
-            <a href="/open-sdg-simple-starter/7">
-                <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/7.png" id="goal-7" alt="Affordable and clean energy - Goal 7" class="goal-icon-image goal-icon-image-"/>
-            </a>
-        </div>
-        
-        <div class="col-4 col-md-2 col-lg-1 goal-tile">
-            <a href="/open-sdg-simple-starter/8">
-                <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/8.png" id="goal-8" alt="Decent jobs and economic growth - Goal 8" class="goal-icon-image goal-icon-image-"/>
-            </a>
-        </div>
-        
-        <div class="col-4 col-md-2 col-lg-1 goal-tile">
-            <a href="/open-sdg-simple-starter/9">
-                <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/9.png" id="goal-9" alt="Industry, innovation and infrastructure - Goal 9" class="goal-icon-image goal-icon-image-"/>
-            </a>
-        </div>
-        
-        <div class="col-4 col-md-2 col-lg-1 goal-tile">
-            <a href="/open-sdg-simple-starter/10">
-                <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/10.png" id="goal-10" alt="Reduced inequalities - Goal 10" class="goal-icon-image goal-icon-image-"/>
-            </a>
-        </div>
-        
-        <div class="col-4 col-md-2 col-lg-1 goal-tile">
-            <a href="/open-sdg-simple-starter/11">
-                <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/11.png" id="goal-11" alt="Sustainable cities &amp; communities - Goal 11" class="goal-icon-image goal-icon-image-"/>
-            </a>
-        </div>
-        
-        <div class="col-4 col-md-2 col-lg-1 goal-tile">
-            <a href="/open-sdg-simple-starter/12">
-                <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/12.png" id="goal-12" alt="Responsible consumption and production - Goal 12" class="goal-icon-image goal-icon-image-"/>
-            </a>
-        </div>
-        
-        <div class="col-4 col-md-2 col-lg-1 goal-tile">
-            <a href="/open-sdg-simple-starter/13">
-                <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/13.png" id="goal-13" alt="Climate action - Goal 13" class="goal-icon-image goal-icon-image-"/>
-            </a>
-        </div>
-        
-        <div class="col-4 col-md-2 col-lg-1 goal-tile">
-            <a href="/open-sdg-simple-starter/14">
-                <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/14.png" id="goal-14" alt="Life below water - Goal 14" class="goal-icon-image goal-icon-image-"/>
-            </a>
-        </div>
-        
-        <div class="col-4 col-md-2 col-lg-1 goal-tile">
-            <a href="/open-sdg-simple-starter/15">
-                <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/15.png" id="goal-15" alt="Life on land - Goal 15" class="goal-icon-image goal-icon-image-"/>
-            </a>
-        </div>
-        
-        <div class="col-4 col-md-2 col-lg-1 goal-tile">
-            <a href="/open-sdg-simple-starter/16">
-                <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/16.png" id="goal-16" alt="Peace and justice - strong institutions - Goal 16" class="goal-icon-image goal-icon-image-"/>
-            </a>
-        </div>
-        
-        <div class="col-4 col-md-2 col-lg-1 goal-tile">
-            <a href="/open-sdg-simple-starter/17">
-                <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/17.png" id="goal-17" alt="Partnerships for the goals - Goal 17" class="goal-icon-image goal-icon-image-"/>
-            </a>
-        </div>
-        
+    
     </div>
-</div>
-        
     </div>
-    
-
-    
-    <div class="frontpage-cards">
-    
-        
-
-        
-        <div class="row">
-        
-
-        
-        <div class="col-sm-6 col-md-4">
-    <div class="card">
-    <div class="card-body">
-
-    
-    <h2 class="card-title"
-        
-        style="border-color: ;"
-        
-    >Download all data</h2>
-    
-  
-    
-  
-    
-      <div class="zip-download-container">
+    <div class="zip-download-container">
     <a href="/open-sdg-simple-starter/en/zip/all_indicators.zip"
        class="btn btn-primary btn-download" aria-describedby="zip-download-info">
         Download all data
@@ -418,117 +420,10 @@ data-event-label="high"
         ZIP file - 22 Bytes
         
             <br>
-            Data last updated - Mar 31, 2022
+            Data last updated - Jun 25, 2022
         
     </div>
 </div>
-
-    
-  
-    
-
-    </div>
-  
-  </div>
-  
-  </div>
-        
-
-        
-
-    
-        
-
-        
-
-        
-        <div class="col-sm-6 col-md-4">
-    <div class="card">
-    <div class="card-body">
-
-    
-    <h2 class="card-title"
-        
-        style="border-color: ;"
-        
-    >Lorem ipsum</h2>
-    
-  
-    
-    <div class="card-text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi mollis
-cursus est sed dapibus.</p>
-</div>
-    
-  
-    
-  
-    
-    
-    
-    
-    <a class="btn btn-primary btn-download" href="https://example.com">
-      Read more
-    </a>
-    
-
-    </div>
-  
-  </div>
-  
-  </div>
-        
-
-        
-
-    
-        
-
-        
-
-        
-        <div class="col-sm-6 col-md-4">
-    <div class="card">
-    <div class="card-body">
-
-    
-    <h2 class="card-title"
-        
-        style="border-color: ;"
-        
-    >Nam vestibulum</h2>
-    
-  
-    
-    <div class="card-text"><p>Nam vestibulum, purus quis porttitor imperdiet, nisl sem mollis nisl, a
-interdum risus enim vitae tortor. Donec feugiat accumsan rutrum.</p>
-</div>
-    
-  
-    
-  
-    
-    
-    
-    
-    <a class="btn btn-primary btn-download" href="https://example.com">
-      Read more
-    </a>
-    
-
-    </div>
-  
-  </div>
-  
-  </div>
-        
-
-        
-        </div>
-        
-
-    
-    </div>
-    
 
 </div>
 
@@ -604,12 +499,12 @@ interdum risus enim vitae tortor. Donec feugiat accumsan rutrum.</p>
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/open-sdg-simple-starter/assets/js/sdg.js?v=20220331165743'></script>
+<script src='/open-sdg-simple-starter/assets/js/sdg.js?v=20220625002158'></script>
 
 
     
     
-    <script src="/open-sdg-simple-starter/assets/js/custom.js?v=20220331165743"></script><script>
+    <script src="/open-sdg-simple-starter/assets/js/custom.js?v=20220625002158"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
