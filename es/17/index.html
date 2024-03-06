@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-        <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=Promise%2CArray.prototype.forEach%2CString.prototype.includes%2CURLSearchParams%2CCustomEvent%2CArray.prototype.includes%2CArray.prototype.filter%2CArray.prototype.some%2CArray.prototype.find%2CArray.prototype.reduce%2CObject.assign%2CArray.isArray%2CObject.values%2CObject.entries%2CArray.from%2CSet%2CArray.prototype.findIndex"></script>
+        <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=Promise%2CArray.prototype.forEach%2CString.prototype.includes%2CURLSearchParams%2CCustomEvent%2CArray.prototype.includes%2CArray.prototype.filter%2CArray.prototype.some%2CArray.prototype.find%2CArray.prototype.reduce%2CObject.assign%2CArray.isArray%2CObject.values%2CObject.entries%2CArray.from%2CSet%2CArray.prototype.findIndex%2Cfetch"></script>
 <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/javascript-canvas-to-blob/3.15.0/js/canvas-to-blob.min.js"></script>
 
         <script>
@@ -43,6 +43,20 @@ var opensdg = {
   ignoredDisaggregations: null,
 
   language: 'es',
+
+  mapColors: {
+    "default": [
+        "#c4e1c6",
+        "#b0d1b3",
+        "#9bc2a1",
+        "#87b28f",
+        "#74a37c",
+        "#60946b",
+        "#4d8559",
+        "#3a7747",
+        "#276836"
+    ]
+},
 };
 
 </script>
@@ -103,16 +117,15 @@ var translations = {
         ================================================== -->
 
         
+    
     <title>Objetivo 17 - Alianzas para Lograr los Objetivos - Indicadores para los Objetivos de Desarrollo Sostenible</title>
+    
 
 
 
-        <meta name="description" content="">
-        <meta property="og:description" content="">
         
         <meta name="robots" content="noindex, nofollow">
         
-        <link rel="canonical" href="/">
 
         <!--[if IE 9]>
         <script src="/open-sdg-simple-starter/assets/js/lib/classList.js"></script>
@@ -123,13 +136,14 @@ var translations = {
 <link rel="icon" type="image/png" sizes="16x16" href="/open-sdg-simple-starter/assets/img/favicons/favicon-16x16.png">
 <link rel="icon" type="image/x-icon" href="/open-sdg-simple-starter/assets/img/favicons/favicon.ico" />
 
+        
 
         
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/open-sdg-simple-starter/assets/css/style.css?v=20230427023935">
+        <link rel="stylesheet" href="/open-sdg-simple-starter/assets/css/style.css?v=20240306014654">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -139,6 +153,9 @@ var translations = {
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.kiprotect.com/klaro/v0.7/klaro.min.css" crossorigin=""/>
         
+
+        
+
 
         <!--[if IE]>
         <link rel="stylesheet" href="/open-sdg-simple-starter/assets/css/ie.css">
@@ -279,7 +296,11 @@ data-event-label="high"
                 <img src="https://open-sdg.org/sdg-translations/assets/img/goals/es/17.png" alt="Alianzas para Lograr los Objetivos - Objetivo 17" id="goal-17" class="goal-icon-image goal-icon-image-" />
             </div>
             <div class="col-8 col-md-9 col-lg-10 goal-details">
-                <h1>Fortalecer los medios de implementación y revitalizar la Alianza Mundial para el Desarrollo Sostenible</h1>
+                <h1>
+                    
+                        Fortalecer los medios de implementación y revitalizar la Alianza Mundial para el Desarrollo Sostenible
+                    
+                </h1>
             </div>
         </div>
     </div>
@@ -333,7 +354,7 @@ data-event-label="high"
             </div>
             <div class="col goal-page-indicator-name">
               
-              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/17-1-1">Total de ingresos del gobierno en proporción al PIB, desglosado por fuente</a></span>
+              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/17-1-1/">Total de ingresos del gobierno en proporción al PIB, desglosado por fuente</a></span>
               
 
 
@@ -373,7 +394,7 @@ data-event-label="high"
             </div>
             <div class="col goal-page-indicator-name">
               
-              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/17-1-2">Proporción del presupuesto nacional financiado por impuestos internos</a></span>
+              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/17-1-2/">Proporción del presupuesto nacional financiado por impuestos internos</a></span>
               
 
 
@@ -428,7 +449,7 @@ data-event-label="high"
             </div>
             <div class="col goal-page-indicator-name">
               
-              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/17-2-1">Asistencia oficial para el desarrollo neta, total y para los países menos adelantados en proporción al ingreso nacional bruto (INB) de los donantes del Comité de Asistencia para el Desarrollo de la Organización de Cooperación y Desarrollo Económicos (OCDE)</a></span>
+              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/17-2-1/">Asistencia oficial para el desarrollo neta, total y para los países menos adelantados en proporción al ingreso nacional bruto (INB) de los donantes del Comité de Asistencia para el Desarrollo de la Organización de Cooperación y Desarrollo Económicos (OCDE)</a></span>
               
 
 
@@ -483,7 +504,7 @@ data-event-label="high"
             </div>
             <div class="col goal-page-indicator-name">
               
-              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/17-3-1">Inversión extranjera directa, asistencia oficial para el desarrollo y cooperación Sur-Sur como proporción del ingreso nacional bruto</a></span>
+              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/17-3-1/">Inversión extranjera directa, asistencia oficial para el desarrollo y cooperación Sur-Sur como proporción del ingreso nacional bruto</a></span>
               
 
 
@@ -523,7 +544,7 @@ data-event-label="high"
             </div>
             <div class="col goal-page-indicator-name">
               
-              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/17-3-2">Volumen de remesas (en dólares de los Estados Unidos) en proporción al PIB total</a></span>
+              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/17-3-2/">Volumen de remesas (en dólares de los Estados Unidos) en proporción al PIB total</a></span>
               
 
 
@@ -578,7 +599,7 @@ data-event-label="high"
             </div>
             <div class="col goal-page-indicator-name">
               
-              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/17-4-1">Servicio de la deuda en proporción a las exportaciones de bienes y servicios</a></span>
+              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/17-4-1/">Servicio de la deuda en proporción a las exportaciones de bienes y servicios</a></span>
               
 
 
@@ -633,7 +654,7 @@ data-event-label="high"
             </div>
             <div class="col goal-page-indicator-name">
               
-              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/17-5-1">Número de países que adoptan y aplican sistemas de promoción de las inversiones en favor de los países en desarrollo, entre ellos los países menos adelantados</a></span>
+              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/17-5-1/">Número de países que adoptan y aplican sistemas de promoción de las inversiones en favor de los países en desarrollo, entre ellos los países menos adelantados</a></span>
               
 
 
@@ -688,7 +709,7 @@ data-event-label="high"
             </div>
             <div class="col goal-page-indicator-name">
               
-              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/17-6-1">Número de abonados a Internet de banda ancha fija por cada 100 habitantes, desglosado por velocidad</a></span>
+              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/17-6-1/">Número de abonados a Internet de banda ancha fija por cada 100 habitantes, desglosado por velocidad</a></span>
               
 
 
@@ -743,7 +764,7 @@ data-event-label="high"
             </div>
             <div class="col goal-page-indicator-name">
               
-              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/17-7-1">Total de los fondos destinados a los países en desarrollo a fin de promover el desarrollo, la transferencia y la difusión de tecnologías ecológicamente racionales</a></span>
+              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/17-7-1/">Total de los fondos destinados a los países en desarrollo a fin de promover el desarrollo, la transferencia y la difusión de tecnologías ecológicamente racionales</a></span>
               
 
 
@@ -798,7 +819,7 @@ data-event-label="high"
             </div>
             <div class="col goal-page-indicator-name">
               
-              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/17-8-1">Proporción de personas que utilizan Internet</a></span>
+              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/17-8-1/">Proporción de personas que utilizan Internet</a></span>
               
 
 
@@ -853,7 +874,7 @@ data-event-label="high"
             </div>
             <div class="col goal-page-indicator-name">
               
-              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/17-9-1">Valor en dólares de la asistencia financiera y técnica (incluso mediante la cooperación Norte-Sur, Sur‐Sur y triangular) prometida a los países en desarrollo</a></span>
+              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/17-9-1/">Valor en dólares de la asistencia financiera y técnica (incluso mediante la cooperación Norte-Sur, Sur‐Sur y triangular) prometida a los países en desarrollo</a></span>
               
 
 
@@ -908,7 +929,7 @@ data-event-label="high"
             </div>
             <div class="col goal-page-indicator-name">
               
-              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/17-10-1">Promedio arancelario mundial ponderado</a></span>
+              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/17-10-1/">Promedio arancelario mundial ponderado</a></span>
               
 
 
@@ -963,7 +984,7 @@ data-event-label="high"
             </div>
             <div class="col goal-page-indicator-name">
               
-              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/17-11-1">Participación de los países en desarrollo y los países menos adelantados en las exportaciones mundiales</a></span>
+              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/17-11-1/">Participación de los países en desarrollo y los países menos adelantados en las exportaciones mundiales</a></span>
               
 
 
@@ -1018,7 +1039,7 @@ data-event-label="high"
             </div>
             <div class="col goal-page-indicator-name">
               
-              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/17-12-1">Promedio ponderado de los aranceles que enfrentan los países en desarrollo, los países menos adelantados y los pequeños Estados insulares en desarrolloPromedio de los aranceles que enfrentan los países en desarrollo, los países menos adelantados y los pequeños Estados insulares en desarrollo</a></span>
+              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/17-12-1/">Promedio ponderado de los aranceles que enfrentan los países en desarrollo, los países menos adelantados y los pequeños Estados insulares en desarrolloPromedio de los aranceles que enfrentan los países en desarrollo, los países menos adelantados y los pequeños Estados insulares en desarrollo</a></span>
               
 
 
@@ -1073,7 +1094,7 @@ data-event-label="high"
             </div>
             <div class="col goal-page-indicator-name">
               
-              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/17-13-1">Tablero macroeconómico</a></span>
+              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/17-13-1/">Tablero macroeconómico</a></span>
               
 
 
@@ -1128,7 +1149,7 @@ data-event-label="high"
             </div>
             <div class="col goal-page-indicator-name">
               
-              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/17-14-1">Número de países que cuentan con mecanismos para mejorar la coherencia de las políticas de desarrollo sostenible</a></span>
+              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/17-14-1/">Número de países que cuentan con mecanismos para mejorar la coherencia de las políticas de desarrollo sostenible</a></span>
               
 
 
@@ -1183,7 +1204,7 @@ data-event-label="high"
             </div>
             <div class="col goal-page-indicator-name">
               
-              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/17-15-1">Grado de utilización de los marcos de resultados y las herramientas de planificación de los propios países por los proveedores de cooperación para el desarrollo</a></span>
+              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/17-15-1/">Grado de utilización de los marcos de resultados y las herramientas de planificación de los propios países por los proveedores de cooperación para el desarrollo</a></span>
               
 
 
@@ -1238,7 +1259,7 @@ data-event-label="high"
             </div>
             <div class="col goal-page-indicator-name">
               
-              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/17-16-1">Número de países que informan de sus progresos en los marcos de múltiples interesados para el seguimiento de la eficacia de las actividades de desarrollo que apoyan el logro de los Objetivos de Desarrollo Sostenible</a></span>
+              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/17-16-1/">Número de países que informan de sus progresos en los marcos de múltiples interesados para el seguimiento de la eficacia de las actividades de desarrollo que apoyan el logro de los Objetivos de Desarrollo Sostenible</a></span>
               
 
 
@@ -1293,7 +1314,7 @@ data-event-label="high"
             </div>
             <div class="col goal-page-indicator-name">
               
-              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/17-17-1">Suma en dólares de los Estados Unidos prometida a las alianzas público-privadas centradas en la infraestructura</a></span>
+              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/17-17-1/">Suma en dólares de los Estados Unidos prometida a las alianzas público-privadas centradas en la infraestructura</a></span>
               
 
 
@@ -1348,7 +1369,7 @@ data-event-label="high"
             </div>
             <div class="col goal-page-indicator-name">
               
-              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/17-18-1">Indicador de capacidad estadística para el seguimiento de los Objetivos de Desarrollo Sostenible</a></span>
+              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/17-18-1/">Indicador de capacidad estadística para el seguimiento de los Objetivos de Desarrollo Sostenible</a></span>
               
 
 
@@ -1388,7 +1409,7 @@ data-event-label="high"
             </div>
             <div class="col goal-page-indicator-name">
               
-              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/17-18-2">Número de países cuya legislación nacional sobre estadísticas cumple los Principios Fundamentales de las Estadísticas Oficiales</a></span>
+              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/17-18-2/">Número de países cuya legislación nacional sobre estadísticas cumple los Principios Fundamentales de las Estadísticas Oficiales</a></span>
               
 
 
@@ -1428,7 +1449,7 @@ data-event-label="high"
             </div>
             <div class="col goal-page-indicator-name">
               
-              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/17-18-3">Número de países que cuentan con un plan estadístico nacional plenamente financiado y en proceso de aplicación, desglosado por fuente de financiación</a></span>
+              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/17-18-3/">Número de países que cuentan con un plan estadístico nacional plenamente financiado y en proceso de aplicación, desglosado por fuente de financiación</a></span>
               
 
 
@@ -1483,7 +1504,7 @@ data-event-label="high"
             </div>
             <div class="col goal-page-indicator-name">
               
-              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/17-19-1">Valor en dólares de todos los recursos proporcionados para fortalecer la capacidad estadística de los países en desarrollo</a></span>
+              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/17-19-1/">Valor en dólares de todos los recursos proporcionados para fortalecer la capacidad estadística de los países en desarrollo</a></span>
               
 
 
@@ -1523,7 +1544,7 @@ data-event-label="high"
             </div>
             <div class="col goal-page-indicator-name">
               
-              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/17-19-2">Proporción de países que a) han realizado al menos un censo de población y vivienda en los últimos diez años; y b) han registrado el 100% de los nacimientos y el 80% de las defunciones</a></span>
+              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/17-19-2/">Proporción de países que a) han realizado al menos un censo de población y vivienda en los últimos diez años; y b) han registrado el 100% de los nacimientos y el 80% de las defunciones</a></span>
               
 
 
@@ -1623,12 +1644,12 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Buscar';</script>
 
-<script src='/open-sdg-simple-starter/assets/js/sdg.js?v=20230427023935'></script>
+<script src='/open-sdg-simple-starter/assets/js/sdg.js?v=20240306014654'></script>
 
 
     
     
-    <script src="/open-sdg-simple-starter/assets/js/custom.js?v=20230427023935"></script><script>
+    <script src="/open-sdg-simple-starter/assets/js/custom.js?v=20240306014654"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-        <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=Promise%2CArray.prototype.forEach%2CString.prototype.includes%2CURLSearchParams%2CCustomEvent%2CArray.prototype.includes%2CArray.prototype.filter%2CArray.prototype.some%2CArray.prototype.find%2CArray.prototype.reduce%2CObject.assign%2CArray.isArray%2CObject.values%2CObject.entries%2CArray.from%2CSet%2CArray.prototype.findIndex"></script>
+        <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=Promise%2CArray.prototype.forEach%2CString.prototype.includes%2CURLSearchParams%2CCustomEvent%2CArray.prototype.includes%2CArray.prototype.filter%2CArray.prototype.some%2CArray.prototype.find%2CArray.prototype.reduce%2CObject.assign%2CArray.isArray%2CObject.values%2CObject.entries%2CArray.from%2CSet%2CArray.prototype.findIndex%2Cfetch"></script>
 <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/javascript-canvas-to-blob/3.15.0/js/canvas-to-blob.min.js"></script>
 
         <script>
@@ -43,6 +43,20 @@ var opensdg = {
   ignoredDisaggregations: null,
 
   language: 'es',
+
+  mapColors: {
+    "default": [
+        "#c4e1c6",
+        "#b0d1b3",
+        "#9bc2a1",
+        "#87b28f",
+        "#74a37c",
+        "#60946b",
+        "#4d8559",
+        "#3a7747",
+        "#276836"
+    ]
+},
 };
 
 </script>
@@ -103,16 +117,15 @@ var translations = {
         ================================================== -->
 
         
+    
     <title>Objetivo 12 - Producción y Consumo Responsables - Indicadores para los Objetivos de Desarrollo Sostenible</title>
+    
 
 
 
-        <meta name="description" content="">
-        <meta property="og:description" content="">
         
         <meta name="robots" content="noindex, nofollow">
         
-        <link rel="canonical" href="/">
 
         <!--[if IE 9]>
         <script src="/open-sdg-simple-starter/assets/js/lib/classList.js"></script>
@@ -123,13 +136,14 @@ var translations = {
 <link rel="icon" type="image/png" sizes="16x16" href="/open-sdg-simple-starter/assets/img/favicons/favicon-16x16.png">
 <link rel="icon" type="image/x-icon" href="/open-sdg-simple-starter/assets/img/favicons/favicon.ico" />
 
+        
 
         
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/open-sdg-simple-starter/assets/css/style.css?v=20230427023935">
+        <link rel="stylesheet" href="/open-sdg-simple-starter/assets/css/style.css?v=20240306014654">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -139,6 +153,9 @@ var translations = {
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.kiprotect.com/klaro/v0.7/klaro.min.css" crossorigin=""/>
         
+
+        
+
 
         <!--[if IE]>
         <link rel="stylesheet" href="/open-sdg-simple-starter/assets/css/ie.css">
@@ -279,7 +296,11 @@ data-event-label="high"
                 <img src="https://open-sdg.org/sdg-translations/assets/img/goals/es/12.png" alt="Producción y Consumo Responsables - Objetivo 12" id="goal-12" class="goal-icon-image goal-icon-image-" />
             </div>
             <div class="col-8 col-md-9 col-lg-10 goal-details">
-                <h1>Garantizar modalidades de consumo y producción sostenibles</h1>
+                <h1>
+                    
+                        Garantizar modalidades de consumo y producción sostenibles
+                    
+                </h1>
             </div>
         </div>
     </div>
@@ -333,7 +354,7 @@ data-event-label="high"
             </div>
             <div class="col goal-page-indicator-name">
               
-              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/12-1-1">Número de países que elaboran, adoptan o aplican instrumentos de política destinados a apoyar la transición hacia modalidades de consumo y producción sostenibles</a></span>
+              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/12-1-1/">Número de países que elaboran, adoptan o aplican instrumentos de política destinados a apoyar la transición hacia modalidades de consumo y producción sostenibles</a></span>
               
 
 
@@ -388,7 +409,7 @@ data-event-label="high"
             </div>
             <div class="col goal-page-indicator-name">
               
-              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/12-2-1">Huella material en términos absolutos, huella material per cápita y huella material por PIB</a></span>
+              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/12-2-1/">Huella material en términos absolutos, huella material per cápita y huella material por PIB</a></span>
               
 
 
@@ -428,7 +449,7 @@ data-event-label="high"
             </div>
             <div class="col goal-page-indicator-name">
               
-              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/12-2-2">Consumo material interno en términos absolutos, consumo material interno per cápita y consumo material interno por PIB</a></span>
+              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/12-2-2/">Consumo material interno en términos absolutos, consumo material interno per cápita y consumo material interno por PIB</a></span>
               
 
 
@@ -483,7 +504,7 @@ data-event-label="high"
             </div>
             <div class="col goal-page-indicator-name">
               
-              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/12-3-1">a) Índice de pérdidas de alimentos y b) índice de desperdicio de alimentos</a></span>
+              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/12-3-1/">a) Índice de pérdidas de alimentos y b) índice de desperdicio de alimentos</a></span>
               
 
 
@@ -538,7 +559,7 @@ data-event-label="high"
             </div>
             <div class="col goal-page-indicator-name">
               
-              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/12-4-1">Número de partes en los acuerdos ambientales multilaterales internacionales sobre desechos peligrosos y otros productos químicos que cumplen sus compromisos y obligaciones de transmitir información como se exige en cada uno de esos acuerdos</a></span>
+              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/12-4-1/">Número de partes en los acuerdos ambientales multilaterales internacionales sobre desechos peligrosos y otros productos químicos que cumplen sus compromisos y obligaciones de transmitir información como se exige en cada uno de esos acuerdos</a></span>
               
 
 
@@ -578,7 +599,7 @@ data-event-label="high"
             </div>
             <div class="col goal-page-indicator-name">
               
-              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/12-4-2">a) Desechos peligrosos generados per cápita y b) proporción de desechos peligrosos tratados, desglosados por tipo de tratamiento</a></span>
+              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/12-4-2/">a) Desechos peligrosos generados per cápita y b) proporción de desechos peligrosos tratados, desglosados por tipo de tratamiento</a></span>
               
 
 
@@ -633,7 +654,7 @@ data-event-label="high"
             </div>
             <div class="col goal-page-indicator-name">
               
-              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/12-5-1">Tasa nacional de reciclado, en toneladas de material reciclado</a></span>
+              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/12-5-1/">Tasa nacional de reciclado, en toneladas de material reciclado</a></span>
               
 
 
@@ -688,7 +709,7 @@ data-event-label="high"
             </div>
             <div class="col goal-page-indicator-name">
               
-              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/12-6-1">Número de empresas que publican informes sobre sostenibilidad</a></span>
+              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/12-6-1/">Número de empresas que publican informes sobre sostenibilidad</a></span>
               
 
 
@@ -743,7 +764,7 @@ data-event-label="high"
             </div>
             <div class="col goal-page-indicator-name">
               
-              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/12-7-1">Grado de aplicación de políticas y planes de acción sostenibles en materia de adquisiciones públicas</a></span>
+              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/12-7-1/">Grado de aplicación de políticas y planes de acción sostenibles en materia de adquisiciones públicas</a></span>
               
 
 
@@ -798,7 +819,7 @@ data-event-label="high"
             </div>
             <div class="col goal-page-indicator-name">
               
-              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/12-8-1">Grado en que i) la educación para la ciudadanía mundial y ii) la educación para el desarrollo sostenible se incorporan en a) las políticas nacionales de educación, b) los planes de estudio, c) la formación del profesorado y d) la evaluación de los estudiantes</a></span>
+              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/12-8-1/">Grado en que i) la educación para la ciudadanía mundial y ii) la educación para el desarrollo sostenible se incorporan en a) las políticas nacionales de educación, b) los planes de estudio, c) la formación del profesorado y d) la evaluación de los estudiantes</a></span>
               
 
 
@@ -853,7 +874,7 @@ data-event-label="high"
             </div>
             <div class="col goal-page-indicator-name">
               
-              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/12-a-1">Capacidad instalada de generación de energía renovable en los países en desarrollo (expresada en vatios per cápita)</a></span>
+              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/12-a-1/">Capacidad instalada de generación de energía renovable en los países en desarrollo (expresada en vatios per cápita)</a></span>
               
 
 
@@ -908,7 +929,7 @@ data-event-label="high"
             </div>
             <div class="col goal-page-indicator-name">
               
-              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/12-b-1">Aplicación de instrumentos normalizados de contabilidad para hacer un seguimiento de los aspectos económicos y ambientales de la sostenibilidad del turismo</a></span>
+              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/12-b-1/">Aplicación de instrumentos normalizados de contabilidad para hacer un seguimiento de los aspectos económicos y ambientales de la sostenibilidad del turismo</a></span>
               
 
 
@@ -963,7 +984,7 @@ data-event-label="high"
             </div>
             <div class="col goal-page-indicator-name">
               
-              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/12-c-1">Cantidad de subsidios a los combustibles fósiles por unidad de PIB (producción y consumo)</a></span>
+              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/12-c-1/">Cantidad de subsidios a los combustibles fósiles por unidad de PIB (producción y consumo)</a></span>
               
 
 
@@ -1063,12 +1084,12 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Buscar';</script>
 
-<script src='/open-sdg-simple-starter/assets/js/sdg.js?v=20230427023935'></script>
+<script src='/open-sdg-simple-starter/assets/js/sdg.js?v=20240306014654'></script>
 
 
     
     
-    <script src="/open-sdg-simple-starter/assets/js/custom.js?v=20230427023935"></script><script>
+    <script src="/open-sdg-simple-starter/assets/js/custom.js?v=20240306014654"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

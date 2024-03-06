@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-        <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=Promise%2CArray.prototype.forEach%2CString.prototype.includes%2CURLSearchParams%2CCustomEvent%2CArray.prototype.includes%2CArray.prototype.filter%2CArray.prototype.some%2CArray.prototype.find%2CArray.prototype.reduce%2CObject.assign%2CArray.isArray%2CObject.values%2CObject.entries%2CArray.from%2CSet%2CArray.prototype.findIndex"></script>
+        <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=Promise%2CArray.prototype.forEach%2CString.prototype.includes%2CURLSearchParams%2CCustomEvent%2CArray.prototype.includes%2CArray.prototype.filter%2CArray.prototype.some%2CArray.prototype.find%2CArray.prototype.reduce%2CObject.assign%2CArray.isArray%2CObject.values%2CObject.entries%2CArray.from%2CSet%2CArray.prototype.findIndex%2Cfetch"></script>
 <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/javascript-canvas-to-blob/3.15.0/js/canvas-to-blob.min.js"></script>
 
         <script>
@@ -43,6 +43,20 @@ var opensdg = {
   ignoredDisaggregations: null,
 
   language: 'es',
+
+  mapColors: {
+    "default": [
+        "#c4e1c6",
+        "#b0d1b3",
+        "#9bc2a1",
+        "#87b28f",
+        "#74a37c",
+        "#60946b",
+        "#4d8559",
+        "#3a7747",
+        "#276836"
+    ]
+},
 };
 
 </script>
@@ -103,16 +117,15 @@ var translations = {
         ================================================== -->
 
         
+    
     <title>Objetivo 16 - Paz, justicia e instituciones fuertes - Indicadores para los Objetivos de Desarrollo Sostenible</title>
+    
 
 
 
-        <meta name="description" content="">
-        <meta property="og:description" content="">
         
         <meta name="robots" content="noindex, nofollow">
         
-        <link rel="canonical" href="/">
 
         <!--[if IE 9]>
         <script src="/open-sdg-simple-starter/assets/js/lib/classList.js"></script>
@@ -123,13 +136,14 @@ var translations = {
 <link rel="icon" type="image/png" sizes="16x16" href="/open-sdg-simple-starter/assets/img/favicons/favicon-16x16.png">
 <link rel="icon" type="image/x-icon" href="/open-sdg-simple-starter/assets/img/favicons/favicon.ico" />
 
+        
 
         
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/open-sdg-simple-starter/assets/css/style.css?v=20230427023935">
+        <link rel="stylesheet" href="/open-sdg-simple-starter/assets/css/style.css?v=20240306014654">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -139,6 +153,9 @@ var translations = {
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.kiprotect.com/klaro/v0.7/klaro.min.css" crossorigin=""/>
         
+
+        
+
 
         <!--[if IE]>
         <link rel="stylesheet" href="/open-sdg-simple-starter/assets/css/ie.css">
@@ -279,7 +296,11 @@ data-event-label="high"
                 <img src="https://open-sdg.org/sdg-translations/assets/img/goals/es/16.png" alt="Paz, justicia e instituciones fuertes - Objetivo 16" id="goal-16" class="goal-icon-image goal-icon-image-" />
             </div>
             <div class="col-8 col-md-9 col-lg-10 goal-details">
-                <h1>Promover sociedades pacíficas e inclusivas para el desarrollo sostenible, facilitar el acceso a la justicia para todos y construir a todos los niveles instituciones eficaces e inclusivas que rindan cuentas</h1>
+                <h1>
+                    
+                        Promover sociedades pacíficas e inclusivas para el desarrollo sostenible, facilitar el acceso a la justicia para todos y construir a todos los niveles instituciones eficaces e inclusivas que rindan cuentas
+                    
+                </h1>
             </div>
         </div>
     </div>
@@ -333,7 +354,7 @@ data-event-label="high"
             </div>
             <div class="col goal-page-indicator-name">
               
-              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/16-1-1">Número de víctimas de homicidios intencionales por cada 100.000 habitantes, desglosado por sexo y edad</a></span>
+              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/16-1-1/">Número de víctimas de homicidios intencionales por cada 100.000 habitantes, desglosado por sexo y edad</a></span>
               
 
 
@@ -373,7 +394,7 @@ data-event-label="high"
             </div>
             <div class="col goal-page-indicator-name">
               
-              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/16-1-2">Muertes relacionadas con conflictos por cada 100.000 habitantes, desglosadas por sexo, edad y causa</a></span>
+              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/16-1-2/">Muertes relacionadas con conflictos por cada 100.000 habitantes, desglosadas por sexo, edad y causa</a></span>
               
 
 
@@ -413,7 +434,7 @@ data-event-label="high"
             </div>
             <div class="col goal-page-indicator-name">
               
-              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/16-1-3">Proporción de la población que ha sufrido a) violencia física, b) violencia psicológica y c) violencia sexual en los últimos 12 meses</a></span>
+              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/16-1-3/">Proporción de la población que ha sufrido a) violencia física, b) violencia psicológica y c) violencia sexual en los últimos 12 meses</a></span>
               
 
 
@@ -453,7 +474,7 @@ data-event-label="high"
             </div>
             <div class="col goal-page-indicator-name">
               
-              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/16-1-4">Proporción de la población que se siente segura al caminar sola en su zona de residencia</a></span>
+              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/16-1-4/">Proporción de la población que se siente segura al caminar sola en su zona de residencia</a></span>
               
 
 
@@ -508,7 +529,7 @@ data-event-label="high"
             </div>
             <div class="col goal-page-indicator-name">
               
-              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/16-2-1">Proporción de niños de entre 1 y 17 años que han sufrido algún castigo físico o agresión psicológica a manos de sus cuidadores en el último mes</a></span>
+              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/16-2-1/">Proporción de niños de entre 1 y 17 años que han sufrido algún castigo físico o agresión psicológica a manos de sus cuidadores en el último mes</a></span>
               
 
 
@@ -548,7 +569,7 @@ data-event-label="high"
             </div>
             <div class="col goal-page-indicator-name">
               
-              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/16-2-2">Número de víctimas de la trata de personas por cada 100.000 habitantes, desglosado por sexo, edad y tipo de explotación</a></span>
+              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/16-2-2/">Número de víctimas de la trata de personas por cada 100.000 habitantes, desglosado por sexo, edad y tipo de explotación</a></span>
               
 
 
@@ -588,7 +609,7 @@ data-event-label="high"
             </div>
             <div class="col goal-page-indicator-name">
               
-              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/16-2-3">Proporción de mujeres y hombres jóvenes de entre 18 y 29 años que sufrieron violencia sexual antes de cumplir los 18 años</a></span>
+              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/16-2-3/">Proporción de mujeres y hombres jóvenes de entre 18 y 29 años que sufrieron violencia sexual antes de cumplir los 18 años</a></span>
               
 
 
@@ -643,7 +664,7 @@ data-event-label="high"
             </div>
             <div class="col goal-page-indicator-name">
               
-              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/16-3-1">Proporción de víctimas de violencia en los últimos 12 meses que han notificado su victimización a las autoridades competentes u otros mecanismos de resolución de conflictos reconocidos oficialmente</a></span>
+              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/16-3-1/">Proporción de víctimas de violencia en los últimos 12 meses que han notificado su victimización a las autoridades competentes u otros mecanismos de resolución de conflictos reconocidos oficialmente</a></span>
               
 
 
@@ -683,7 +704,7 @@ data-event-label="high"
             </div>
             <div class="col goal-page-indicator-name">
               
-              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/16-3-2">Proporción de detenidos que no han sido condenados en el conjunto de la población reclusa total</a></span>
+              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/16-3-2/">Proporción de detenidos que no han sido condenados en el conjunto de la población reclusa total</a></span>
               
 
 
@@ -723,7 +744,7 @@ data-event-label="high"
             </div>
             <div class="col goal-page-indicator-name">
               
-              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/16-3-3">Proporción de la población que se ha visto implicada en alguna controversia en los dos últimos años y ha accedido a algún mecanismo oficial u oficioso de solución de controversias, desglosada por tipo de mecanismo</a></span>
+              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/16-3-3/">Proporción de la población que se ha visto implicada en alguna controversia en los dos últimos años y ha accedido a algún mecanismo oficial u oficioso de solución de controversias, desglosada por tipo de mecanismo</a></span>
               
 
 
@@ -778,7 +799,7 @@ data-event-label="high"
             </div>
             <div class="col goal-page-indicator-name">
               
-              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/16-4-1">Valor total de las corrientes financieras ilícitas entrantes y salientes (en dólares corrientes de los Estados Unidos)</a></span>
+              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/16-4-1/">Valor total de las corrientes financieras ilícitas entrantes y salientes (en dólares corrientes de los Estados Unidos)</a></span>
               
 
 
@@ -818,7 +839,7 @@ data-event-label="high"
             </div>
             <div class="col goal-page-indicator-name">
               
-              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/16-4-2">Proporción de armas incautadas, encontradas o entregadas cuyo origen o contexto ilícitos han sido determinados o establecidos por una autoridad competente, de conformidad con los instrumentos internacionales</a></span>
+              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/16-4-2/">Proporción de armas incautadas, encontradas o entregadas cuyo origen o contexto ilícitos han sido determinados o establecidos por una autoridad competente, de conformidad con los instrumentos internacionales</a></span>
               
 
 
@@ -873,7 +894,7 @@ data-event-label="high"
             </div>
             <div class="col goal-page-indicator-name">
               
-              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/16-5-1">Proporción de personas que han tenido al menos un contacto con un funcionario público y que han pagado un soborno a un funcionario público, o a las que un funcionario público les ha pedido un soborno, durante los últimos 12 meses</a></span>
+              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/16-5-1/">Proporción de personas que han tenido al menos un contacto con un funcionario público y que han pagado un soborno a un funcionario público, o a las que un funcionario público les ha pedido un soborno, durante los últimos 12 meses</a></span>
               
 
 
@@ -913,7 +934,7 @@ data-event-label="high"
             </div>
             <div class="col goal-page-indicator-name">
               
-              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/16-5-2">Proporción de negocios que han tenido al menos un contacto con un funcionario público y que han pagado un soborno a un funcionario público, o a los que un funcionario público les ha pedido un soborno, durante los últimos 12 meses</a></span>
+              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/16-5-2/">Proporción de negocios que han tenido al menos un contacto con un funcionario público y que han pagado un soborno a un funcionario público, o a los que un funcionario público les ha pedido un soborno, durante los últimos 12 meses</a></span>
               
 
 
@@ -968,7 +989,7 @@ data-event-label="high"
             </div>
             <div class="col goal-page-indicator-name">
               
-              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/16-6-1">Gastos primarios del gobierno en proporción al presupuesto aprobado originalmente, desglosados por sector (o por códigos presupuestarios o elementos similares)</a></span>
+              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/16-6-1/">Gastos primarios del gobierno en proporción al presupuesto aprobado originalmente, desglosados por sector (o por códigos presupuestarios o elementos similares)</a></span>
               
 
 
@@ -1008,7 +1029,7 @@ data-event-label="high"
             </div>
             <div class="col goal-page-indicator-name">
               
-              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/16-6-2">Proporción de la población que se siente satisfecha con su última experiencia de los servicios públicos</a></span>
+              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/16-6-2/">Proporción de la población que se siente satisfecha con su última experiencia de los servicios públicos</a></span>
               
 
 
@@ -1063,7 +1084,7 @@ data-event-label="high"
             </div>
             <div class="col goal-page-indicator-name">
               
-              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/16-7-1">Proporciones de plazas en las instituciones nacionales y locales, entre ellas: a) las asambleas legislativas, b) la administración pública y c) el poder judicial, en comparación con la distribución nacional, desglosadas por sexo, edad, personas con discapacidad y grupos de población</a></span>
+              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/16-7-1/">Proporciones de plazas en las instituciones nacionales y locales, entre ellas: a) las asambleas legislativas, b) la administración pública y c) el poder judicial, en comparación con la distribución nacional, desglosadas por sexo, edad, personas con discapacidad y grupos de población</a></span>
               
 
 
@@ -1103,7 +1124,7 @@ data-event-label="high"
             </div>
             <div class="col goal-page-indicator-name">
               
-              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/16-7-2">Proporción de la población que considera que la adopción de decisiones es inclusiva y responde a sus necesidades, desglosada por sexo, edad, discapacidad y grupo de población</a></span>
+              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/16-7-2/">Proporción de la población que considera que la adopción de decisiones es inclusiva y responde a sus necesidades, desglosada por sexo, edad, discapacidad y grupo de población</a></span>
               
 
 
@@ -1158,7 +1179,7 @@ data-event-label="high"
             </div>
             <div class="col goal-page-indicator-name">
               
-              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/16-8-1">Proporción de miembros y derechos de voto de los países en desarrollo en organizaciones internacionales</a></span>
+              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/16-8-1/">Proporción de miembros y derechos de voto de los países en desarrollo en organizaciones internacionales</a></span>
               
 
 
@@ -1213,7 +1234,7 @@ data-event-label="high"
             </div>
             <div class="col goal-page-indicator-name">
               
-              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/16-9-1">Proporción de niños menores de 5 años cuyo nacimiento se ha registrado ante una autoridad civil, desglosada por edad</a></span>
+              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/16-9-1/">Proporción de niños menores de 5 años cuyo nacimiento se ha registrado ante una autoridad civil, desglosada por edad</a></span>
               
 
 
@@ -1268,7 +1289,7 @@ data-event-label="high"
             </div>
             <div class="col goal-page-indicator-name">
               
-              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/16-10-1">Número de casos verificados de asesinato, secuestro, desaparición forzada, detención arbitraria y tortura de periodistas, miembros asociados de los medios de comunicación, sindicalistas y defensores de los derechos humanos, en los últimos 12 meses</a></span>
+              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/16-10-1/">Número de casos verificados de asesinato, secuestro, desaparición forzada, detención arbitraria y tortura de periodistas, miembros asociados de los medios de comunicación, sindicalistas y defensores de los derechos humanos, en los últimos 12 meses</a></span>
               
 
 
@@ -1308,7 +1329,7 @@ data-event-label="high"
             </div>
             <div class="col goal-page-indicator-name">
               
-              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/16-10-2">Número de países que adoptan y aplican garantías constitucionales, legales o normativas para el acceso público a la información</a></span>
+              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/16-10-2/">Número de países que adoptan y aplican garantías constitucionales, legales o normativas para el acceso público a la información</a></span>
               
 
 
@@ -1363,7 +1384,7 @@ data-event-label="high"
             </div>
             <div class="col goal-page-indicator-name">
               
-              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/16-a-1">Existencia de instituciones nacionales independientes de derechos humanos, en cumplimiento de los Principios de París</a></span>
+              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/16-a-1/">Existencia de instituciones nacionales independientes de derechos humanos, en cumplimiento de los Principios de París</a></span>
               
 
 
@@ -1418,7 +1439,7 @@ data-event-label="high"
             </div>
             <div class="col goal-page-indicator-name">
               
-              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/16-b-1">Proporción de la población que declara haberse sentido personalmente discriminada o acosada en los últimos 12 meses por motivos de discriminación prohibidos por el derecho internacional de los derechos humanos</a></span>
+              <span class="indicator-name"><a href="/open-sdg-simple-starter/es/16-b-1/">Proporción de la población que declara haberse sentido personalmente discriminada o acosada en los últimos 12 meses por motivos de discriminación prohibidos por el derecho internacional de los derechos humanos</a></span>
               
 
 
@@ -1518,12 +1539,12 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Buscar';</script>
 
-<script src='/open-sdg-simple-starter/assets/js/sdg.js?v=20230427023935'></script>
+<script src='/open-sdg-simple-starter/assets/js/sdg.js?v=20240306014654'></script>
 
 
     
     
-    <script src="/open-sdg-simple-starter/assets/js/custom.js?v=20230427023935"></script><script>
+    <script src="/open-sdg-simple-starter/assets/js/custom.js?v=20240306014654"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
