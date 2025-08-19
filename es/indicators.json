@@ -158,6 +158,14 @@
           "status": "notstarted"
         },
         {
+          "id": "2-2-4",
+          "title": "Prevalence of minimum dietary diversity, by population group (children aged 6 to 23.9 months and non-pregnant women aged 15 to 49 years)",
+          "description": "",
+          "keywords": "",
+          "href": "/open-sdg-simple-starter/es/2-2-4/",
+          "status": "notstarted"
+        },
+        {
           "id": "2-3-1",
           "title": "Volumen de producción por unidad de trabajo desglosado por tamaño y tipo de explotación (agropecuaria/ganadera/forestal)",
           "description": "",
@@ -942,6 +950,14 @@
           "status": "notstarted"
         },
         {
+          "id": "8-9-2",
+          "title": "Employed persons in the tourism industries",
+          "description": "",
+          "keywords": "",
+          "href": "/open-sdg-simple-starter/es/8-9-2/",
+          "status": "notstarted"
+        },
+        {
           "id": "8-10-1",
           "title": "a) Número de sucursales de bancos comerciales por cada 100.000 adultos y b) número de cajeros automáticos por cada 100.000 adultos",
           "description": "",
@@ -1255,7 +1271,7 @@
         },
         {
           "id": "11-5-2",
-          "title": "Pérdidas económicas directas en relación con el PIB mundial, daños en la infraestructura esencial y número de interrupciones de los servicios básicos atribuidos a desastres",
+          "title": "Pérdidas económicas directas atribuidas a catástrofes en relación con el producto interior bruto (PIB) mundial",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-simple-starter/es/11-5-2/",
@@ -1399,7 +1415,7 @@
         },
         {
           "id": "12-7-1",
-          "title": "Grado de aplicación de políticas y planes de acción sostenibles en materia de adquisiciones públicas",
+          "title": "Número de países que aplican políticas y planes de acción de compras públicas sostenibles",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-simple-starter/es/12-7-1/",
@@ -1471,7 +1487,7 @@
         },
         {
           "id": "13-2-1",
-          "title": "Número de países con contribuciones determinadas a nivel nacional, estrategias a largo plazo y planes y estrategias nacionales de adaptación y estrategias indicadas en comunicaciones sobre la adaptación y comunicaciones nacionales",
+          "title": "Número de países con contribuciones determinadas a nivel nacional, estrategias a largo plazo, planes nacionales de adaptación y comunicaciones sobre adaptación, notificados a la secretaría del marco de la Convención de las Naciones Unidas sobre el Cambio Climático",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-simple-starter/es/13-2-1/",
@@ -1503,7 +1519,7 @@
         },
         {
           "id": "13-b-1",
-          "title": "Número de países menos adelantados y pequeños Estados insulares en desarrollo con contribuciones determinadas a nivel nacional, estrategias a largo plazo y planes, estrategias nacionales de adaptación y estrategias indicadas en comunicaciones sobre la adaptación y comunicaciones nacionales",
+          "title": "Número de países menos adelantados y pequeños estados insulares en desarrollo con inversiones determinadas a nivel nacional, estrategias a largo plazo, planes nacionales de adaptación y comunicaciones sobre adaptación según lo informado a la Secretaría de la Convención de las Naciones Unidas sobre el Cambio Climático",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-simple-starter/es/13-b-1/",
@@ -1647,7 +1663,7 @@
         },
         {
           "id": "15-4-2",
-          "title": "Índice de cobertura verde de las montañas",
+          "title": "Índice de cobertura verde de montaña y proporción de tierras montañosas degradadas",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-simple-starter/es/15-4-2/",
@@ -1751,7 +1767,7 @@
         },
         {
           "id": "16-1-4",
-          "title": "Proporción de la población que se siente segura al caminar sola en su zona de residencia",
+          "title": "Proporción de población que se siente segura caminando sola en su residencia después del anochecer",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-simple-starter/es/16-1-4/",
@@ -1951,7 +1967,7 @@
         },
         {
           "id": "17-3-1",
-          "title": "Inversión extranjera directa, asistencia oficial para el desarrollo y cooperación Sur-Sur como proporción del ingreso nacional bruto",
+          "title": "Recursos financieros adicionales movilizados para los países en desarrollo desde múltiples fuentes",
           "description": "",
           "keywords": "",
           "href": "/open-sdg-simple-starter/es/17-3-1/",
